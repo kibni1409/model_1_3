@@ -1,0 +1,25 @@
+.navigation{
+    margin-left: 24px ;
+    display: flex;
+    overflow: scroll;
+}
+.navigation::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.navigation__nav{
+    padding: 7px 8px 7px 8px;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #7E7E82;
+    font-family: "TTLakes-Regular", sans-serif;
+}
+
+.navigation__nav_active{
+    background-color: #FFFFFF;
+    border-color: #B8FFEC;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+}

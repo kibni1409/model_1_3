@@ -1,0 +1,36 @@
+.menu{
+    min-width: 320px;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 88px;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    background: #FFFFFF;
+}
+
+.menu__button{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 40px;
+    height: 40px;
+    background-color: #FF3E79;
+    border-radius: 50%;
+}
+
+.menu__logo{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50px;
+    width: 96px;
+}
+
+.menu__icon{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}

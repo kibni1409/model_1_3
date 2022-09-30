@@ -1,5 +1,11 @@
+@media screen and (max-width: 520px) {
+    .hidden {
+        display: none !important;
+    }
+}
+
 .menu{
-    min-width: 320px;
+    min-width: 305px;
     margin: 0;
     display: flex;
     flex-grow: 1;
@@ -11,18 +17,34 @@
     background: #FFFFFF;
 }
 
+.menu__left-block{
+    display: flex;
+    justify-content:flex-start;
+    margin-left: 15px;
+}
+
+.menu__right-block{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
 .menu__button{
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 15px auto 0;
     width: 40px;
     height: 40px;
     background-color: #FF3E79;
     border-radius: 50%;
 }
 
+.menu__button:last-child{
+    margin-right: 0;
+}
+
 .menu__logo{
     margin-top: auto;
     margin-bottom: auto;
+    margin-right: 20px;
     height: 50px;
     width: 96px;
 }
@@ -33,4 +55,14 @@
     position: relative;
     left: 10px;
     top: 10px;
+}
+
+.menu__divider{
+    width: 2px;
+    height: 32px;
+    background-color:#EAEAEA;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+    border-radius: 1px;
 }

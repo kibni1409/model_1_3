@@ -20,6 +20,7 @@
     left: 0;
     top: 0;
     background: #FFFFFF;
+    box-shadow: 0 2px #D9FFF5;
 }
 
 .menu__left-block{

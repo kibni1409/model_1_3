@@ -3,6 +3,11 @@
         display: none !important;
     }
 }
+@media screen and (min-width: 1120px){
+    .menu{
+        display: none !important;
+    }
+}
 
 .menu{
     min-width: 305px;

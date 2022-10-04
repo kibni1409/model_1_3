@@ -1,0 +1,48 @@
+.button{
+    width: 40px;
+    height: 40px;
+    background-color: #FF3E79;
+    border-radius: 50%;
+}
+
+.button_menu{
+    background-image: url("../../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+}
+
+.button_call{
+    background-image: url("../../img/Call.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+}
+
+.button_message{
+    background-image: url("../../img/Message.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+}
+
+.button_profile{
+    background-image: url("../../img/Profile.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+}
+
+.button_tools{
+    background-image: url("../../img/Tools.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+}
+
+.button_search{
+    background-image: url("../../img/Search.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+}

@@ -1,0 +1,85 @@
+.information{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 28px;
+}
+
+.information__block{
+    min-width: 272px;
+}
+
+.information__block-text{
+    font-size: 14px;
+    margin-bottom: 18px;
+    margin-top: 0;
+    color:#1B1C21;
+    font-family: "TTLakes-Regular", sans-serif;
+    min-width: 270px;
+    max-width: 45vw;
+    min-height: 80px;
+    max-height: 11em;
+    height: 30vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.information__content-picture{
+    width: 100%;
+    object-fit: cover;
+}
+
+.information__block-more{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.information__more-text{
+    font-family: "TTLakes-Medium", sans-serif;
+    margin-left: 10px;
+}
+
+.information__more-icon{
+    width: 24px;
+    height: 24px;
+    margin: auto 0 auto 0;
+    background-image: url("../../img/More.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+}
+
+/* Mobile*/
+@media screen and (max-width: 550px){
+    .information{
+        display: block;
+    }
+    .information__picture{
+        width: 100%;
+        height: auto;
+    }
+    .information__block-text{
+        max-width: 100%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 551px) and (max-width: 1119px){
+    .information__block-text{
+        padding-right: 24px;
+    }
+    .information__content{
+        padding-left: 24px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1120px){
+    .information__block-text{
+        padding-right: 36px;
+    }
+    .information__content{
+        padding-left: 24px;
+    }
+}

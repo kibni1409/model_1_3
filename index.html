@@ -1,83 +1,113 @@
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <title>Макет 1.3</title>
-        <link rel="preload" href="src/fonts/TTLakes-Black.ttf" as="font">
-        <link href="src/Component/Menu/menu.css" rel="stylesheet">
-        <link href="src/html.css" rel="stylesheet">
-        <link href="src/Component/Information/information.css" rel="stylesheet">
-        <link href="src/Component/Navigation/navigation.css" rel="stylesheet">
-        <link href="src/Component/Heading/heading.css" rel="stylesheet">
-        <link href="src/Component/Button/button.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="menu hidden-desktop">
-            <div class="menu__left-block">
-                <div class="menu__button button button_menu "></div>
-                <div class="menu__divider hidden-tablet"></div>
-                <div class="menu__logo">
-                    <img src="src/img/Logo.svg" alt="Logo.svg"/>
-                </div>
-            </div>
-            <div class="menu__divider hidden-mobile "></div>
-            <div class="menu__right-block">
-                <div class="menu__button button button_call hidden-tablet"></div>
-                <div class="menu__button button button_message hidden-tablet"></div>
-                <div class="menu__button button button_profile hidden-tablet"></div>
-                <div class="menu__divider hidden-tablet"></div>
-                <div class="menu__button button button_tools"></div>
-                <div class="menu__button button button_search"></div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Макет 1.3</title>
+    <link rel="preload" href="src/fonts/TTLakes-Black.ttf" as="font">
+    <link href="src/Component/Menu/menu.css" rel="stylesheet">
+    <link href="src/html.css" rel="stylesheet">
+    <link href="src/Component/Information/information.css" rel="stylesheet">
+    <link href="src/Component/Navigation/navigation.css" rel="stylesheet">
+    <link href="src/Component/Heading/heading.css" rel="stylesheet">
+    <link href="src/Component/Button/button.css" rel="stylesheet">
+</head>
+<body>
+<header class="menu hidden-desktop">
+    <div class="menu__left-block">
+        <div class="menu__button button button_menu "></div>
+        <div class="menu__divider hidden-tablet"></div>
+        <div class="menu__logo">
+            <img src="src/img/Logo.svg" alt="Logo.svg"/>
         </div>
-        <div class="heading">
-            <div class="heading__left-block">
-                <div class="heading__highlight"></div>
-                <div class="heading__text">Услуги и сервисы</div>
-            </div>
-            <div class="heading__right-block">
-                <div class="heading__button">
-                    <div class="heading__button-text">Оставить заявку</div>
-                    <div class="button button_tools"></div>
-                </div>
-                <div class="heading__button">
-                    <div class="heading__button-text">Статус ремонта</div>
-                    <div class="button button_search"></div>
-                </div>
-            </div>
+    </div>
+    <div class="menu__divider hidden-mobile "></div>
+    <div class="menu__right-block">
+        <div class="menu__button button button_call hidden-tablet"></div>
+        <div class="menu__button button button_message hidden-tablet"></div>
+        <div class="menu__button button button_profile hidden-tablet"></div>
+        <div class="menu__divider hidden-tablet"></div>
+        <div class="menu__button button button_tools"></div>
+        <div class="menu__button button button_search"></div>
+    </div>
+</header>
+<div class="heading">
+    <div class="heading__left-block">
+        <div class="heading__highlight"></div>
+        <div class="heading__text">Услуги и сервисы</div>
+    </div>
+    <div class="heading__right-block">
+        <div class="heading__button">
+            <div class="heading__button-text">Оставить заявку</div>
+            <div class="button button_tools"></div>
         </div>
-        <div class="navigation">
-            <div class="navigation__nav active">Рекомендуемые устройства</div>
-            <div class="navigation__nav">Дополнительные услуги</div>
-            <div class="navigation__nav">Цены и услуги</div>
-            <div class="navigation__nav">Специальные цены</div>
-            <div class="navigation__nav">Адреса сервисных центров</div>
-            <div class="navigation__nav">Ремонтируемые бренды</div>
-            <div class="navigation__nav">Отзывы</div>
+        <div class="heading__button">
+            <div class="heading__button-text">Статус ремонта</div>
+            <div class="button button_search"></div>
         </div>
-        <div class="information">
-            <div class="information__block">
-                <div class="information__block-text">
+    </div>
+</div>
+<nav class="navigation__block">
+    <ul class="navigation__list">
+        <li class="navigation__item">
+            <button class="navigation__button active">
+                Рекомендуемые устройства
+            </button>
+        </li>
+        <li class="navigation__item">
+            <button class="navigation__button">
+                Дополнительные услуги
+            </button>
+        </li>
+        <li class="navigation__item">
+            <button class="navigation__button">
+                Цены и услуги
+            </button>
+        </li>
+        <li class="navigation__item">
+            <button class="navigation__button">
+                Специальные цены
+            </button>
+        </li>
+        <li class="navigation__item">
+            <button class="navigation__button">
+                Адреса сервисных центров
+            </button>
+        </li>
+        <li class="navigation__item">
+            <button class="navigation__button">
+                Ремонтируемые бренды
+            </button>
+        </li>
+        <li class="navigation__item">
+            <button class="navigation__button">
+                Отзывы
+            </button>
+        </li>
+    </ul>
+</nav>
+<main class="information">
+    <div class="information__block">
+        <div class="information__block-text">
 
-                    Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-                    Только у нас вы можете отремонтировать свой ноутбук Dell с
-                    официальной гарантией производителя.<br>
+            Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+            Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.<br>
 
-                    <br>
-                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
-                    что подтверждает большое количество постоянных клиентов.<br>
-                    Мы гордимся тем, что к нам обращаются по рекомендациям и,
-                    в свою очередь, советуют нас родным и близким.<br>
+            <br>
+            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+            что подтверждает большое количество постоянных клиентов.<br>
+            Мы гордимся тем, что к нам обращаются по рекомендациям и,
+            в свою очередь, советуют нас родным и близким.<br>
 
-                </div>
-                <div class="information__block-more">
-                    <div class="information__more-icon"></div>
-                    <div class="information__more-text">Читать далее</div>
-                </div>
-            </div>
-            <div class="information__content">
-                <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
-            </div>
         </div>
-    </body>
+        <div class="information__block-more">
+            <div class="information__more-icon"></div>
+            <div class="information__more-text">Читать далее</div>
+        </div>
+    </div>
+    <div class="information__content">
+        <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
+    </div>
+</main>
+</body>
 </html>

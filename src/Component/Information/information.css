@@ -50,6 +50,7 @@
     object-fit: fill;
 }
 
+
 /* Mobile*/
 @media screen and (max-width: 550px){
     .information{

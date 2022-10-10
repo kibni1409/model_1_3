@@ -1,5 +1,5 @@
 .menu{
-    min-width: 288px;
+    min-width: 280px;
     display: flex;
     justify-content: space-between;
     height: 88px;
@@ -9,7 +9,6 @@
     box-shadow: 0 2px #D9FFF5;
     padding-right: 20px;
     padding-left: 20px;
-
 }
 
 .menu__left-block{
@@ -29,6 +28,7 @@
 .menu__logo{
     height: 50px;
     width: 96px;
+    cursor: pointer;
 }
 
 .menu__divider{
@@ -88,5 +88,8 @@
 @media screen and (min-width: 1120px){
     .hidden-desktop{
         display: none;
+    }
+    .menu__right-block{
+        width: auto;
     }
 }

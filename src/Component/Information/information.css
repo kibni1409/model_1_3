@@ -1,9 +1,12 @@
 .information{
     display: flex;
+    max-width: 1060px;
     justify-content: space-between;
     padding-top: 24px;
     padding-left: 20px;
     padding-right: 28px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .information__block{
@@ -19,8 +22,8 @@
     min-width: 270px;
     max-width: 45vw;
     min-height: 80px;
-    max-height: 11em;
-    height: 30vw;
+    max-height: none;
+    height: 11em;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -79,8 +82,10 @@
 @media (min-width: 1120px){
     .information__block-text{
         padding-right: 36px;
+        height: auto;
     }
     .information__content{
         padding-left: 24px;
     }
+
 }

@@ -1,0 +1,119 @@
+.sidebar{
+    display: none;
+    flex-direction: column;
+    width: 320px;
+    min-width: 320px;
+    height: 100vh;
+    margin-left: 0;
+    background-color: white;
+    transition: left 1s .3s;
+    box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+
+}
+
+.sidebar__menu{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+}
+
+.sidebar__main{
+    width: 320px;
+    height: calc(100vh - 88px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar__navigation .navigation__list{
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+.sidebar__footer{
+    padding: 0 24px 24px 24px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 196px;
+}
+.sidebar__contacts{
+
+}
+
+.sidebar__contacts-buttons{
+    width: 152px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar__contacts-email{
+    font-size: 16px;
+    color: #1B1C21;
+    font-family: TTLakes-Black, sans-serif;
+}
+
+.sidebar__contacts-phone{
+    font-size: 24px;
+    color: #1B1C21;
+    letter-spacing: -0.6px;
+    font-family: TTLakes-Bold, sans-serif;
+}
+
+.sidebar__footer-lang{
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    height: 22px;
+    font-size: 16px;
+    font-family: TTLakes-Black, sans-serif;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar__footer-lang li{
+    align-self: center;
+    cursor: pointer;
+}
+.active-lang{
+    font-size: 16px;
+    font-family: TTLakes-Regular, sans-serif;
+}
+
+/* Mobile */
+@media screen and (max-width: 1119px){
+    .sidebar {
+        display: flex;
+        position: absolute;
+        left: -400px;
+        top: 0;
+    }
+    .sidebar__menu .menu__left-block{
+        width: 160px;
+    }
+    .sidebar__menu .menu__right-block{
+        width: 40px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1120px){
+    .sidebar{
+        display: flex;
+        box-shadow: none;
+    }
+    .button_cancel{
+        display: none;
+    }
+    .sidebar__menu .menu__left-block{
+        width: 120px;
+    }
+    .sidebar__menu .menu__right-block{
+        width: 40px;
+    }
+}

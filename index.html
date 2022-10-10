@@ -10,104 +10,185 @@
     <link href="src/Component/Navigation/navigation.css" rel="stylesheet">
     <link href="src/Component/Heading/heading.css" rel="stylesheet">
     <link href="src/Component/Button/button.css" rel="stylesheet">
+    <link href="src/Component/SideBar/sidebar.css" rel="stylesheet">
+    <script src="./src/Component/Menu/menu.js"></script>
+    <script src="./src/Component/Information/information.js"></script>
 </head>
-<body>
-<header class="menu hidden-desktop">
-    <div class="menu__left-block">
-        <div class="menu__button button button_menu "></div>
-        <div class="menu__divider hidden-tablet"></div>
-        <div class="menu__logo">
-            <img src="src/img/Logo.svg" alt="Logo.svg"/>
+<body onresize="Size()" onload="Size()">
+    <header class="menu hidden-desktop">
+        <div class="menu__left-block">
+            <div onclick="OpenMenu()" class="menu__button button button_menu "></div>
+            <div class="menu__divider hidden-tablet"></div>
+            <div class="menu__logo">
+                <img src="src/img/Logo.svg" alt="Logo.svg"/>
+            </div>
         </div>
-    </div>
-    <div class="menu__divider hidden-mobile "></div>
-    <div class="menu__right-block">
-        <div class="menu__button button button_call hidden-tablet"></div>
-        <div class="menu__button button button_message hidden-tablet"></div>
-        <div class="menu__button button button_profile hidden-tablet"></div>
-        <div class="menu__divider hidden-tablet"></div>
-        <div class="menu__button button button_tools"></div>
-        <div class="menu__button button button_search"></div>
-    </div>
-</header>
-<div class="heading">
-    <div class="heading__left-block">
-        <div class="heading__highlight"></div>
-        <div class="heading__text">Услуги и сервисы</div>
-    </div>
-    <div class="heading__right-block">
-        <div class="heading__button">
-            <div class="heading__button-text">Оставить заявку</div>
-            <div class="button button_tools"></div>
+        <div class="menu__divider hidden-mobile "></div>
+        <div class="menu__right-block">
+            <div class="menu__button button button_call hidden-tablet"></div>
+            <div class="menu__button button button_message hidden-tablet"></div>
+            <div class="menu__button button button_profile hidden-tablet"></div>
+            <div class="menu__divider hidden-tablet"></div>
+            <div class="menu__button button button_tools"></div>
+            <div class="menu__button button button_search"></div>
         </div>
-        <div class="heading__button">
-            <div class="heading__button-text">Статус ремонта</div>
-            <div class="button button_search"></div>
+    </header>
+    <div onfocus="CloseMenu()" class="sidebar">
+        <div class="sidebar__menu menu">
+            <div class="sidebar__menu menu__left-block">
+                <div onclick="CloseMenu()" class="menu__button button button_cancel"></div>
+                <div class="menu__logo">
+                    <img src="src/img/Logo.svg" alt="Logo.svg"/>
+                </div>
+            </div>
+            <div class="sidebar__menu menu__right-block">
+                <div class="menu__button button button_search"></div>
+            </div>
         </div>
-    </div>
-</div>
-<nav class="navigation__block">
-    <ul class="navigation__list">
-        <li class="navigation__item">
-            <button class="navigation__button active">
-                Рекомендуемые устройства
-            </button>
-        </li>
-        <li class="navigation__item">
-            <button class="navigation__button">
-                Дополнительные услуги
-            </button>
-        </li>
-        <li class="navigation__item">
-            <button class="navigation__button">
-                Цены и услуги
-            </button>
-        </li>
-        <li class="navigation__item">
-            <button class="navigation__button">
-                Специальные цены
-            </button>
-        </li>
-        <li class="navigation__item">
-            <button class="navigation__button">
-                Адреса сервисных центров
-            </button>
-        </li>
-        <li class="navigation__item">
-            <button class="navigation__button">
-                Ремонтируемые бренды
-            </button>
-        </li>
-        <li class="navigation__item">
-            <button class="navigation__button">
-                Отзывы
-            </button>
-        </li>
-    </ul>
-</nav>
-<main class="information">
-    <div class="information__block">
-        <div class="information__block-text">
+        <main class="sidebar__main">
+            <nav class="sidebar__navigation navigation__block">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <button class="navigation__button active">
+                            Ремонт техники
+                        </button>
+                    </li>
+                    <li class="navigation__item">
+                        <button class="navigation__button">
+                            Услуги и сервисы
+                        </button>
+                    </li>
+                    <li class="navigation__item">
+                        <button class="navigation__button">
+                            Корпораивным клиентам
+                        </button>
+                    </li>
+                    <li class="navigation__item">
+                        <button class="navigation__button">
+                            Продавцам техники
+                        </button>
+                    </li>
+                    <li class="navigation__item">
+                        <button class="navigation__button">
+                            Партнерам
+                        </button>
+                    </li>
+                    <li class="navigation__item">
+                        <button class="navigation__button">
+                            Производителям
+                        </button>
+                    </li>
+                    <li class="navigation__item">
+                        <button class="navigation__button">
+                            Наши сервисные центры
+                        </button>
+                    </li>
+                    <li class="navigation__item">
+                        <button class="navigation__button">
+                            Контакты
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="sidebar__footer">
+                <div class="sidebar__contacts">
+                    <div class="sidebar__contacts-buttons">
+                        <div class="button button_call "></div>
+                        <div class="button button_message "></div>
+                        <div class="button button_profile "></div>
+                    </div>
+                    <p class="sidebar__contacts-email">mail@cps.com</p>
+                    <span class="sidebar__contacts-phone">8 800 890 8900</span>
+                </div>
 
-            Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-            Только у нас вы можете отремонтировать свой ноутбук Dell с
-            официальной гарантией производителя.<br>
-
-            <br>
-            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
-            что подтверждает большое количество постоянных клиентов.<br>
-            Мы гордимся тем, что к нам обращаются по рекомендациям и,
-            в свою очередь, советуют нас родным и близким.<br>
-
-        </div>
-        <div class="information__block-more">
-            <div class="information__more-icon"></div>
-            <div class="information__more-text">Читать далее</div>
-        </div>
+                <ul class="sidebar__footer-lang">
+                    <li class="active-lang">RU</li>
+                    <li>EN</li>
+                    <li>CH</li>
+                </ul>
+            </footer>
+        </main>
     </div>
-    <div class="information__content">
-        <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
+    <div class="body-block">
+        <div class="heading">
+            <div class="heading__left-block">
+                <div class="heading__text">Услуги и сервисы</div>
+            </div>
+            <div class="heading__right-block">
+                <div class="heading__button">
+                    <div class="heading__button-text">Оставить заявку</div>
+                    <div class="button button_tools"></div>
+                </div>
+                <div class="heading__button">
+                    <div class="heading__button-text">Статус ремонта</div>
+                    <div class="button button_search"></div>
+                </div>
+            </div>
+        </div>
+        <nav class="navigation__block">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <button class="navigation__button active">
+                        Рекомендуемые устройства
+                    </button>
+                </li>
+                <li class="navigation__item">
+                    <button class="navigation__button">
+                        Дополнительные услуги
+                    </button>
+                </li>
+                <li class="navigation__item">
+                    <button class="navigation__button">
+                        Цены и услуги
+                    </button>
+                </li>
+                <li class="navigation__item">
+                    <button class="navigation__button">
+                        Специальные цены
+                    </button>
+                </li>
+                <li class="navigation__item">
+                    <button class="navigation__button">
+                        Адреса сервисных центров
+                    </button>
+                </li>
+                <li class="navigation__item">
+                    <button class="navigation__button">
+                        Ремонтируемые бренды
+                    </button>
+                </li>
+                <li class="navigation__item">
+                    <button class="navigation__button">
+                        Отзывы
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <main class="information">
+            <div class="information__block">
+                <div class="information__block-text">
+
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+                    Только у нас вы можете отремонтировать свой ноутбук Dell с
+                    официальной гарантией производителя.<br>
+
+                    <br>
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                    что подтверждает большое количество постоянных клиентов.<br>
+                    <br>
+                    Мы гордимся тем, что к нам обращаются по рекомендациям и,
+                    в свою очередь, советуют нас родным и близким.<br>
+
+                </div>
+                <div onclick="ReadMore()" class="information__block-more">
+                    <div class="information__more-icon"></div>
+                    <div class="information__more-text">Читать далее</div>
+                </div>
+            </div>
+            <div class="information__content">
+                <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
+            </div>
+        </main>
     </div>
-</main>
 </body>
 </html>

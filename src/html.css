@@ -24,3 +24,12 @@ body{
     margin: 0;
     background-color: #F8F8F8;
 }
+
+@media screen and (min-width: 1120px){
+    body{
+        flex-direction: row;
+    }
+    .body-block{
+        width: calc(100vw - 320px);
+    }
+}

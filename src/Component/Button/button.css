@@ -4,6 +4,10 @@
     background-color: #FF3E79;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.5s ;
+}
+.button:hover{
+    background-color: #b01d4a;
 }
 
 .button_menu{
@@ -43,6 +47,13 @@
 
 .button_search{
     background-image: url("../../img/Search.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+}
+
+.button_cancel{
+    background-image: url("../../img/Cancel.svg");
     background-repeat: no-repeat;
     background-position:center;
     object-fit: fill;

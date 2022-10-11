@@ -15,9 +15,22 @@
 
 html{
     padding: 0;
+    overflow-x: hidden;
+}
+
+.blur{
+    z-index: 2;
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #cccccc;
+    opacity: 0;
+    transition: opacity 2s;
 }
 
 body{
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,6 +38,7 @@ body{
     background-color: #F8F8F8;
 }
 
+/* Desktop */
 @media screen and (min-width: 1120px){
     body{
         flex-direction: row;

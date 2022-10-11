@@ -11,29 +11,32 @@
     <link href="src/Component/Heading/heading.css" rel="stylesheet">
     <link href="src/Component/Button/button.css" rel="stylesheet">
     <link href="src/Component/SideBar/sidebar.css" rel="stylesheet">
+    <link href="src/Component/Feedback/feedback.css" rel="stylesheet">
     <script src="./src/Component/Menu/menu.js"></script>
     <script src="./src/Component/Information/information.js"></script>
+    <script src="./src/Component/Feedback/feedback.js"></script>
 </head>
 <body onresize="Size()" onload="Size()">
-    <header class="menu hidden-desktop">
-        <div class="menu__left-block">
-            <div onclick="OpenMenu()" class="menu__button button button_menu "></div>
-            <div class="menu__divider hidden-tablet"></div>
-            <div class="menu__logo">
-                <img src="src/img/Logo.svg" alt="Logo.svg"/>
-            </div>
+<header class="menu hidden-desktop">
+    <div class="menu__left-block">
+        <div onclick="OpenMenu()" class="menu__button button button_menu "></div>
+        <div class="menu__divider hidden-tablet"></div>
+        <div class="menu__logo">
+            <img src="src/img/Logo.svg" alt="Logo.svg"/>
         </div>
-        <div class="menu__divider hidden-mobile "></div>
-        <div class="menu__right-block">
-            <div class="menu__button button button_call hidden-tablet"></div>
-            <div class="menu__button button button_message hidden-tablet"></div>
-            <div class="menu__button button button_profile hidden-tablet"></div>
-            <div class="menu__divider hidden-tablet"></div>
-            <div class="menu__button button button_tools"></div>
-            <div class="menu__button button button_search"></div>
-        </div>
-    </header>
-    <div onfocus="CloseMenu()" class="sidebar">
+    </div>
+    <div class="menu__divider hidden-mobile "></div>
+    <div class="menu__right-block">
+        <div class="menu__button button button_call hidden-tablet"></div>
+        <div onclick="OpenFeedback()" class="menu__button button button_message hidden-tablet"></div>
+        <div class="menu__button button button_profile hidden-tablet"></div>
+        <div class="menu__divider hidden-tablet"></div>
+        <div class="menu__button button button_tools"></div>
+        <div class="menu__button button button_search"></div>
+    </div>
+</header>
+    <div onclick=" CloseFeedback(); CloseMenu()" class="blur"></div>
+    <div class="sidebar">
         <div class="sidebar__menu menu">
             <div class="sidebar__menu menu__left-block">
                 <div onclick="CloseMenu()" class="menu__button button button_cancel"></div>
@@ -94,7 +97,7 @@
                 <div class="sidebar__contacts">
                     <div class="sidebar__contacts-buttons">
                         <div class="button button_call "></div>
-                        <div class="button button_message "></div>
+                        <div onclick="OpenFeedback()" class="button button_message "></div>
                         <div class="button button_profile "></div>
                     </div>
                     <p class="sidebar__contacts-email">mail@cps.com</p>
@@ -189,6 +192,42 @@
                 <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
             </div>
         </main>
+    </div>
+    <div class="feedback">
+        <div class="feedback__button">
+            <div onclick="CloseFeedback()" class="button button_cancel"></div>
+        </div>
+        <div class="feedback__heading heading">
+            <div class="heading__left-block">
+                <div class="heading__text">Обратная связь</div>
+            </div>
+        </div>
+        <div class="feedback__main">
+            <form class="feedback__form">
+                <label>
+                    <input class="feedback__form-input" type="text" placeholder="Имя">
+                </label>
+                <label>
+                    <input class="feedback__form-input" type="text" placeholder="Фамилия">
+                </label>
+                <label>
+                    <input class="feedback__form-input" type="email" placeholder="Электронная почта">
+                </label>
+                <label>
+                    <input class="feedback__form-input" type="text" placeholder="Сообщение">
+                </label>
+                <p class="feedback__form-text">
+                    Нажимая “отправить”, вы даете согласие на обработку
+                    <a class="feedback__form-a" href="#">персональных данных</a>
+                    и соглашаетесь с нашей
+                    <a class="feedback__form-a" href="#">политикой конфиденциальности</a>
+                </p>
+                <button class="feedback__form-button" type="submit">
+                    ОТПРАВИТЬ
+                    <img class="feedback__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
+                </button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

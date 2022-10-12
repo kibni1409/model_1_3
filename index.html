@@ -11,12 +11,14 @@
     <link href="src/Component/Heading/heading.css" rel="stylesheet">
     <link href="src/Component/Button/button.css" rel="stylesheet">
     <link href="src/Component/SideBar/sidebar.css" rel="stylesheet">
-    <link href="src/Component/Feedback/feedback.css" rel="stylesheet">
+    <link href="src/Component/PopupPanel/popupPanel.css" rel="stylesheet">
+    <link href="src/Component/RepairBar/repairBar.css" rel="stylesheet">
     <script src="./src/Component/Menu/menu.js"></script>
     <script src="./src/Component/Information/information.js"></script>
-    <script src="./src/Component/Feedback/feedback.js"></script>
+    <script src="src/Component/PopupPanel/popupPanel.js"></script>
+    <script src="src/Component/RepairBar/repairBar.js"></script>
 </head>
-<body onresize="Size()" onload="Size()">
+<body onload="FirmCards()">
 <header class="menu hidden-desktop">
     <div class="menu__left-block">
         <div onclick="OpenMenu()" class="menu__button button button_menu "></div>
@@ -27,207 +29,238 @@
     </div>
     <div class="menu__divider hidden-mobile "></div>
     <div class="menu__right-block">
-        <div class="menu__button button button_call hidden-tablet"></div>
-        <div onclick="OpenFeedback()" class="menu__button button button_message hidden-tablet"></div>
+        <div onclick="OpenPopupPanel('call')" class="menu__button button button_call hidden-tablet"></div>
+        <div onclick="OpenPopupPanel('feed')" class="menu__button button button_message hidden-tablet"></div>
         <div class="menu__button button button_profile hidden-tablet"></div>
         <div class="menu__divider hidden-tablet"></div>
         <div class="menu__button button button_tools"></div>
         <div class="menu__button button button_search"></div>
     </div>
 </header>
-    <div onclick=" CloseFeedback(); CloseMenu()" class="blur"></div>
-    <div class="sidebar">
-        <div class="sidebar__menu menu">
-            <div class="sidebar__menu menu__left-block">
-                <div onclick="CloseMenu()" class="menu__button button button_cancel"></div>
-                <div class="menu__logo">
-                    <img src="src/img/Logo.svg" alt="Logo.svg"/>
-                </div>
-            </div>
-            <div class="sidebar__menu menu__right-block">
-                <div class="menu__button button button_search"></div>
+<div onclick=" ClosePopupPanel('call'); ClosePopupPanel('feed'); CloseMenu()" class="blur"></div>
+<div class="sidebar">
+    <div class="sidebar__menu menu">
+        <div class="sidebar__menu menu__left-block">
+            <div onclick="CloseMenu()" class="menu__button button button_cancel"></div>
+            <div class="menu__logo">
+                <img src="src/img/Logo.svg" alt="Logo.svg"/>
             </div>
         </div>
-        <main class="sidebar__main">
-            <nav class="sidebar__navigation navigation__block">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <button class="navigation__button active">
-                            Ремонт техники
-                        </button>
-                    </li>
-                    <li class="navigation__item">
-                        <button class="navigation__button">
-                            Услуги и сервисы
-                        </button>
-                    </li>
-                    <li class="navigation__item">
-                        <button class="navigation__button">
-                            Корпораивным клиентам
-                        </button>
-                    </li>
-                    <li class="navigation__item">
-                        <button class="navigation__button">
-                            Продавцам техники
-                        </button>
-                    </li>
-                    <li class="navigation__item">
-                        <button class="navigation__button">
-                            Партнерам
-                        </button>
-                    </li>
-                    <li class="navigation__item">
-                        <button class="navigation__button">
-                            Производителям
-                        </button>
-                    </li>
-                    <li class="navigation__item">
-                        <button class="navigation__button">
-                            Наши сервисные центры
-                        </button>
-                    </li>
-                    <li class="navigation__item">
-                        <button class="navigation__button">
-                            Контакты
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-            <footer class="sidebar__footer">
-                <div class="sidebar__contacts">
-                    <div class="sidebar__contacts-buttons">
-                        <div class="button button_call "></div>
-                        <div onclick="OpenFeedback()" class="button button_message "></div>
-                        <div class="button button_profile "></div>
-                    </div>
-                    <p class="sidebar__contacts-email">mail@cps.com</p>
-                    <span class="sidebar__contacts-phone">8 800 890 8900</span>
-                </div>
-
-                <ul class="sidebar__footer-lang">
-                    <li class="active-lang">RU</li>
-                    <li>EN</li>
-                    <li>CH</li>
-                </ul>
-            </footer>
-        </main>
+        <div class="sidebar__menu menu__right-block">
+            <div class="menu__button button button_search"></div>
+        </div>
     </div>
-    <div class="body-block">
-        <div class="heading">
-            <div class="heading__left-block">
-                <div class="heading__text">Услуги и сервисы</div>
-            </div>
-            <div class="heading__right-block">
-                <div class="heading__button">
-                    <div class="heading__button-text">Оставить заявку</div>
-                    <div class="button button_tools"></div>
-                </div>
-                <div class="heading__button">
-                    <div class="heading__button-text">Статус ремонта</div>
-                    <div class="button button_search"></div>
-                </div>
-            </div>
-        </div>
-        <nav class="navigation__block">
+    <main class="sidebar__main">
+        <nav class="sidebar__navigation navigation__block">
             <ul class="navigation__list">
                 <li class="navigation__item">
                     <button class="navigation__button active">
-                        Рекомендуемые устройства
+                        Ремонт техники
                     </button>
                 </li>
                 <li class="navigation__item">
                     <button class="navigation__button">
-                        Дополнительные услуги
+                        Услуги и сервисы
                     </button>
                 </li>
                 <li class="navigation__item">
                     <button class="navigation__button">
-                        Цены и услуги
+                        Корпораивным клиентам
                     </button>
                 </li>
                 <li class="navigation__item">
                     <button class="navigation__button">
-                        Специальные цены
+                        Продавцам техники
                     </button>
                 </li>
                 <li class="navigation__item">
                     <button class="navigation__button">
-                        Адреса сервисных центров
+                        Партнерам
                     </button>
                 </li>
                 <li class="navigation__item">
                     <button class="navigation__button">
-                        Ремонтируемые бренды
+                        Производителям
                     </button>
                 </li>
                 <li class="navigation__item">
                     <button class="navigation__button">
-                        Отзывы
+                        Наши сервисные центры
+                    </button>
+                </li>
+                <li class="navigation__item">
+                    <button class="navigation__button">
+                        Контакты
                     </button>
                 </li>
             </ul>
         </nav>
-        <main class="information">
-            <div class="information__block">
-                <div class="information__block-text">
-
-                    Мы являемся авторизованным сервисным центром по ремонту техники Dell.
-                    Только у нас вы можете отремонтировать свой ноутбук Dell с
-                    официальной гарантией производителя.<br>
-
-                    <br>
-                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
-                    что подтверждает большое количество постоянных клиентов.<br>
-                    <br>
-                    Мы гордимся тем, что к нам обращаются по рекомендациям и,
-                    в свою очередь, советуют нас родным и близким.<br>
-
+        <footer class="sidebar__footer">
+            <div class="sidebar__contacts">
+                <div class="sidebar__contacts-buttons">
+                    <div onclick="OpenPopupPanel('call')" class="button button_call "></div>
+                    <div onclick="OpenPopupPanel('feed')" class="button button_message "></div>
+                    <div class="button button_profile "></div>
                 </div>
-                <div onclick="ReadMore()" class="information__block-more">
-                    <div class="information__more-icon"></div>
-                    <div class="information__more-text">Читать далее</div>
-                </div>
+                <p class="sidebar__contacts-email">mail@cps.com</p>
+                <span class="sidebar__contacts-phone">8 800 890 8900</span>
             </div>
-            <div class="information__content">
-                <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
+            <ul class="sidebar__footer-lang">
+                <li class="active-lang">RU</li>
+                <li>EN</li>
+                <li>CH</li>
+            </ul>
+        </footer>
+    </main>
+</div>
+<div class="body-block">
+    <div class="heading">
+        <div class="heading__left-block">
+            <div class="heading__text">Услуги и сервисы</div>
+        </div>
+        <div class="heading__right-block">
+            <div class="heading__button">
+                <div class="heading__button-text">Оставить заявку</div>
+                <div class="button button_tools"></div>
             </div>
-        </main>
+            <div class="heading__button">
+                <div class="heading__button-text">Статус ремонта</div>
+                <div class="button button_search"></div>
+            </div>
+        </div>
     </div>
-    <div class="feedback">
-        <div class="feedback__button">
-            <div onclick="CloseFeedback()" class="button button_cancel"></div>
-        </div>
-        <div class="feedback__heading heading">
-            <div class="heading__left-block">
-                <div class="heading__text">Обратная связь</div>
-            </div>
-        </div>
-        <div class="feedback__main">
-            <form class="feedback__form">
-                <label>
-                    <input class="feedback__form-input" type="text" placeholder="Имя">
-                </label>
-                <label>
-                    <input class="feedback__form-input" type="text" placeholder="Фамилия">
-                </label>
-                <label>
-                    <input class="feedback__form-input" type="email" placeholder="Электронная почта">
-                </label>
-                <label>
-                    <input class="feedback__form-input" type="text" placeholder="Сообщение">
-                </label>
-                <p class="feedback__form-text">
-                    Нажимая “отправить”, вы даете согласие на обработку
-                    <a class="feedback__form-a" href="#">персональных данных</a>
-                    и соглашаетесь с нашей
-                    <a class="feedback__form-a" href="#">политикой конфиденциальности</a>
-                </p>
-                <button class="feedback__form-button" type="submit">
-                    ОТПРАВИТЬ
-                    <img class="feedback__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
+    <nav class="navigation__block">
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <button class="navigation__button active">
+                    Рекомендуемые устройства
                 </button>
-            </form>
+            </li>
+            <li class="navigation__item">
+                <button class="navigation__button">
+                    Дополнительные услуги
+                </button>
+            </li>
+            <li class="navigation__item">
+                <button class="navigation__button">
+                    Цены и услуги
+                </button>
+            </li>
+            <li class="navigation__item">
+                <button class="navigation__button">
+                    Специальные цены
+                </button>
+            </li>
+            <li class="navigation__item">
+                <button class="navigation__button">
+                    Адреса сервисных центров
+                </button>
+            </li>
+            <li class="navigation__item">
+                <button class="navigation__button">
+                    Ремонтируемые бренды
+                </button>
+            </li>
+            <li class="navigation__item">
+                <button class="navigation__button">
+                    Отзывы
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <div class="information">
+        <div class="information__block">
+            <div class="information__block-text">
+
+                Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+                Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.<br>
+
+                <br>
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+                что подтверждает большое количество постоянных клиентов.<br>
+                <br>
+                Мы гордимся тем, что к нам обращаются по рекомендациям и,
+                в свою очередь, советуют нас родным и близким.<br>
+
+            </div>
+            <div onclick="ReadMore('info')" class="information__block-more">
+                <div class="information__more-icon"></div>
+                <div class="information__more-text">Читать далее</div>
+            </div>
+        </div>
+        <div class="information__content">
+            <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
         </div>
     </div>
+    <div onload="FirmCards()" class="repairBar">
+        <div class="repairBar__heading">
+            <span>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
+        </div>
+        <div class="repairBar__main firma">
+            <div class="repairBar__card cardFirm">
+                <img class="repairBar__icon" src="src/img/Lenovo.svg" alt="Lenovo.svg">
+                <div class="repairBar__button"></div>
+            </div>
+        </div>
+        <div onclick="ReadMore('firma')" class="repairBar__more_firma  information__block-more">
+            <div class="information__more-icon firma"></div>
+            <div class="information__more-text firma">Показать все</div>
+        </div>
+    </div>
+</div>
+<div class="popupPanel feedback">
+    <div class="popupPanel__button">
+        <div onclick="ClosePopupPanel('feed')" class="button button_cancel"></div>
+    </div>
+    <div class="popupPanel__heading heading">
+        <div class="heading__left-block">
+            <div class="heading__text">Обратная связь</div>
+        </div>
+    </div>
+    <div class="popupPanel__main">
+        <form class="popupPanel__form">
+            <input class="popupPanel__form-input" type="text" placeholder="Имя">
+            <input class="popupPanel__form-input" type="text" placeholder="Фамилия">
+            <input class="popupPanel__form-input" type="email" placeholder="Электронная почта">
+            <textarea class="popupPanel__form-input" placeholder="Сообщение"></textarea>
+            <p class="popupPanel__form-text">
+                Нажимая “отправить”, вы даете согласие на обработку
+                <a class="popupPanel__form-a" href="#">персональных данных</a>
+                и соглашаетесь с нашей
+                <a class="popupPanel__form-a" href="#">политикой конфиденциальности</a>
+            </p>
+            <button class="popupPanel__form-button" type="submit">
+                ОТПРАВИТЬ
+                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="popupPanel callback">
+    <div class="popupPanel__button">
+        <div onclick="ClosePopupPanel('call')" class="button button_cancel"></div>
+    </div>
+    <div class="popupPanel__heading heading">
+        <div class="heading__left-block">
+            <div class="heading__text">Заказать звонок</div>
+        </div>
+    </div>
+    <div class="popupPanel__main">
+        <form class="popupPanel__form">
+            <input class="popupPanel__form-input" type="text" placeholder="Телефон">
+            <p class="popupPanel__form-text">
+                Нажимая “отправить”, вы даете согласие на обработку
+                <a class="popupPanel__form-a" href="#">персональных данных</a>
+                и соглашаетесь с нашей
+                <a class="popupPanel__form-a" href="#">политикой конфиденциальности</a>
+            </p>
+            <button class="popupPanel__form-button" type="submit">
+                ОТПРАВИТЬ
+                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
+            </button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

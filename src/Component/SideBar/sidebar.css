@@ -42,9 +42,6 @@
     justify-content: space-between;
     height: 196px;
 }
-.sidebar__contacts{
-
-}
 
 .sidebar__contacts-buttons{
     width: 152px;
@@ -71,15 +68,17 @@
     width: 90px;
     height: 22px;
     font-size: 16px;
-    font-family: TTLakes-Black, sans-serif;
+    font-family: TTLakes-Regular, sans-serif;
     list-style: none;
     display: flex;
     justify-content: space-between;
 }
+
 .sidebar__footer-lang li{
     align-self: center;
     cursor: pointer;
 }
+
 .active-lang{
     font-size: 16px;
     font-family: TTLakes-Regular, sans-serif;

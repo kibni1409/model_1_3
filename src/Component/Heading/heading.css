@@ -9,13 +9,9 @@
     align-self: center;
 }
 
-.heading__highlight {
-
-}
-
 .heading__text {
     font-size: 28px;
-    font-family: "TTLakes-Bold", sans-serif;
+    font-family: TTLakes-Bold, sans-serif;
     line-height: 40px;
     align-self: center;
 }

@@ -1,0 +1,132 @@
+.repairBar{
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   /* border: 2px solid aqua;*/
+    background-color: #F2F2F2;;
+}
+
+.repairBar__heading{
+    padding: 16px 16px 16px 32px;
+    /*border: 2px solid blue;*/
+    font-size: 16px;
+    color: #7E7E82;
+    font-family: TTLakes-Regular, sans-serif;
+    width: 100%;
+    background: linear-gradient(90deg,  #F2F2F2 10%, rgba(255,255,255,1) 100%);
+}
+
+.repairBar__main{
+    padding: 24px 32px 0 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+   /* border: 2px solid green;*/
+    height: 176px;
+    width: 1056px;
+    align-self: center;
+    overflow: hidden;
+}
+
+.repairBar__card{
+    margin-right: 32px;
+    margin-bottom: 16px;
+    width: 204px;
+    height: 40px;
+    /*border: 2px solid red;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background: #FFFFFF;
+    /*border: 1px solid #EAEAEA;*/
+    border-radius: 6px;
+}
+.repairBar__card:nth-child(4n){
+    margin-right: 0;
+}
+
+.repairBar__icon{
+    width: 152px;
+}
+
+.repairBar__button{
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 20px;
+    background-image: url("./../../img/ArrowPink.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+    cursor: pointer;
+    transition: background-color, 1s;
+}
+.repairBar__button:hover{
+    background-color: #b01d4a;
+    background-image: url("./../../img/Arrow.svg");
+    border: 2px solid white;
+}
+
+/* Mobile */
+@media screen and (max-width: 550px){
+    .repairBar__main{
+
+    }
+}
+
+
+/* Desktop 5*/
+@media (min-width: 1920px) {
+    .repairBar__main {
+        width: 1328px;
+    }
+
+    .repairBar__card:nth-child(5n) {
+        margin-right: 0;
+    }
+
+    .repairBar__card:nth-child(4n) {
+        margin-right: 32px;
+    }
+}
+
+/* Desktop 4*/
+@media (min-width: 1370px) and (max-width: 1919px){
+    .repairBar__main{
+        width: 1056px;
+    }
+}
+
+/* Mobile Tablet 3*/
+@media (min-width: 768px ) and (max-width: 1369px){
+    .repairBar__main{
+        width: 740px;
+    }
+    .repairBar__card{
+        width: 188px;
+    }
+    .repairBar__card:nth-child(3n){
+        margin-right: 0;
+    }
+    .repairBar__card:nth-child(4n){
+        margin-right: 32px;
+    }
+}
+/* Mobile 2*/
+@media (min-width: 551px) and (max-width: 767px){
+    .repairBar__main{
+        width: 488px;
+    }
+    .repairBar__card{
+        width: 188px;
+    }
+    .repairBar__card:nth-child(2n){
+        margin-right: 0;
+    }
+
+}
+
+

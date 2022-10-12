@@ -9,6 +9,7 @@
     width: 0;
     height: 0;
 }
+
 .navigation__list{
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +19,7 @@
 .navigation__item{
     list-style-type: none;
 }
+
 .navigation__button{
     border: none;
     background: none;
@@ -25,7 +27,7 @@
     white-space: nowrap;
     font-size: 16px;
     color: #7E7E82;
-    font-family: "TTLakes-Regular", sans-serif;
+    font-family: TTLakes-Regular, sans-serif;
 }
 
 .navigation__button:hover{
@@ -44,13 +46,14 @@
     border-style: solid;
 }
 
-
+/* Desktop*/
 @media screen and (min-width: 1120px){
     .navigation__list{
-        /*width: calc(100vw - 390px);*/
         display: flex;
     }
 }
+
+/* Mobile */
 @media screen and (max-width: 1119px){
     .navigation__list{
         flex-wrap: nowrap;

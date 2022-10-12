@@ -42,6 +42,7 @@
 .hidden-desktop{
     display: flex;
 }
+
 .menu__button{
     align-self: center;
 }

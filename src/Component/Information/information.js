@@ -1,10 +1,32 @@
-function ReadMore() {
-    let info = document.querySelector('.information__block-text');
-    info.style.maxHeight = 'none';
-    info.style.height = 'auto';
+function ReadMore(el) {
+    if(el === 'info'){
+        let info = document.querySelector('.information__block-text');
+        info.style.maxHeight = 'none';
+        info.style.height = 'auto';
+    }
+    if(el === 'firma'){
+        let text = document.querySelector('.information__more-text.firma');
+        let firma = document.querySelector('.repairBar__main.firma');
+        let icon = document.querySelector('.information__more-icon.firma')
 
-    let readMore = document.querySelector('.information__block-more');
-    readMore.style.display = 'none';
+        if(text.textContent === 'Показать все'){
+            firma.style.height = 'auto';
+            text.textContent = 'Скрыть';
+            icon.style.transform = 'rotate(180deg)';
+        }
+        else{
+            firma.style.height = '176px';
+            text.textContent = 'Показать все';
+            icon.style.transform = 'rotate(0deg)'
+        }
+    }
+    if(el === 'model'){
+
+    }
+
+
+    /*let readMore = document.querySelector('.information__block-more');*/
+    /*readMore.style.display = 'none';*/
 }
 
 function Size(){

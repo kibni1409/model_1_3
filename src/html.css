@@ -13,6 +13,11 @@
     src: url("fonts/TTLakes-Medium.woff") format("woff");
 }
 
+@font-face {
+    font-family: "TTLakes-Black";
+    src: url("fonts/TTLakes-Black.woff") format("woff");
+}
+
 html{
     padding: 0;
     overflow-x: hidden;

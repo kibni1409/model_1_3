@@ -1,23 +1,67 @@
+/* Всплывающее меню */
 .sidebar{
     z-index: 5;
     display: none;
     flex-direction: column;
     width: 320px;
     min-width: 320px;
-    height: 100vh;
+
     margin-left: 0;
     background-color: white;
     transition: left 1s;
     box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
 }
+@media screen and (max-width: 1119px){
+    .sidebar {
+        display: flex;
+        position: absolute;
+        left: -400px;
+        top: 0;
+    }
+}
+@media screen and (min-width: 1120px){
+    .sidebar{
+        display: flex;
+        box-shadow: none;
+    }
+}
+@media screen and (min-width: 1120px){
+    .menu__button.button.button_cancel{
+        display: none;
+    }
+}
 
+
+/* Меню всплывающего блока */
 .sidebar__menu{
     width: 280px;
     display: flex;
     justify-content: space-between;
     box-shadow: none;
 }
+@media screen and (max-width: 1119px){
+    .sidebar__menu .menu__left-block{
+        width: 160px;
+    }
+}
+@media screen and (max-width: 1119px){
+    .sidebar__menu .menu__right-block{
+        width: 40px;
+    }
+}
+@media screen and (min-width: 1120px){
+    .sidebar__menu .menu__left-block{
+        width: 120px;
+    }
+}
+@media screen and (min-width: 1120px){
+    .sidebar__menu .menu__right-block{
+        width: 40px;
+    }
+}
 
+
+/* Основная часть меню */
 .sidebar__main{
     width: 320px;
     height: calc(100vh - 88px);
@@ -26,6 +70,8 @@
     justify-content: space-between;
 }
 
+
+/* Навигационная часть */
 .sidebar__navigation .navigation__list{
     display: flex;
     width: 320px;
@@ -34,6 +80,8 @@
     flex-wrap: nowrap;
 }
 
+
+/* Подвал всплывающего меню */
 .sidebar__footer{
     padding: 0 24px 24px 24px;
     flex-wrap: wrap;
@@ -43,18 +91,24 @@
     height: 196px;
 }
 
+
+/* Расположение кнопок */
 .sidebar__contacts-buttons{
     width: 152px;
     display: flex;
     justify-content: space-between;
 }
 
+
+/* Блок с почтой */
 .sidebar__contacts-email{
     font-size: 16px;
     color: #1B1C21;
     font-family: TTLakes-Black, sans-serif;
 }
 
+
+/* Блок с номером телефона */
 .sidebar__contacts-phone{
     font-size: 24px;
     color: #1B1C21;
@@ -62,6 +116,8 @@
     font-family: TTLakes-Bold, sans-serif;
 }
 
+
+/* Блок с номером телефона */
 .sidebar__footer-lang{
     margin: 0;
     padding: 0;
@@ -74,45 +130,16 @@
     justify-content: space-between;
 }
 
+
+/* Блок с выбором языка */
 .sidebar__footer-lang li{
     align-self: center;
     cursor: pointer;
 }
 
+
+/* Выбранный язык */
 .active-lang{
     font-size: 16px;
     font-family: TTLakes-Regular, sans-serif;
-}
-
-/* Mobile */
-@media screen and (max-width: 1119px){
-    .sidebar {
-        display: flex;
-        position: absolute;
-        left: -400px;
-        top: 0;
-    }
-    .sidebar__menu .menu__left-block{
-        width: 160px;
-    }
-    .sidebar__menu .menu__right-block{
-        width: 40px;
-    }
-}
-
-/* Desktop */
-@media screen and (min-width: 1120px){
-    .sidebar{
-        display: flex;
-        box-shadow: none;
-    }
-    .menu__button.button.button_cancel{
-        display: none;
-    }
-    .sidebar__menu .menu__left-block{
-        width: 120px;
-    }
-    .sidebar__menu .menu__right-block{
-        width: 40px;
-    }
 }

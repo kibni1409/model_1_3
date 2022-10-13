@@ -1,67 +1,70 @@
+/* Данные карточек фирм */
 let FirmCardsData = [
-    {
-        urlPick: './../../img/Lenovo.svg'
-    },
-    {
-        urlPick: './../../img/Samsung.svg'
-    },
-    {
-        urlPick: './../../img/Apple.svg'
+    {urlPick: 'src/img/Lenovo.svg'},
+    {urlPick: 'src/img/Samsung.svg'},
+    {urlPick: 'src/img/Apple.svg'},
+    {urlPick: 'src/img/Bosch.svg'},
+    {urlPick: 'src/img/Hp.svg'},
+    {urlPick: 'src/img/Acer.svg'},
+    {urlPick: 'src/img/ViewSonic.svg'},
+    {urlPick: 'src/img/Sony.svg'}
+];
+
+/* Данные карточек моделей */
+let ModelCardsData = [
+    {head: 'Ремонт ноутбуков'},
+    {head: 'Ремонт планшетов'},
+    {head: 'Ремонт ПК'},
+    {head: 'Ремонт мониторов'},
+    {head: 'Ремонт телефонов'},
+    {head: 'Ремонт электронных книг'},
+    {head: 'Ремонт электронных часов'},
+]
+
+/* Создание карточек фирм */
+function Cards(array){
+
+    let element;
+
+    if(array === FirmCardsData){
+        element = document.querySelector('.repairBar__main.firma');
     }
-    ];
+    if(array === ModelCardsData){
+        element = document.querySelector('.repairBar__main.model');
+    }
 
-function FirmCards(){
+    for (let i = 0; i < array.length; i++){
 
-    let FirmCardsData = [
-        {
-            urlPick: 'src/img/Lenovo.svg'
-        },
-        {
-            urlPick: 'src/img/Samsung.svg'
-        },
-        {
-            urlPick: 'src/img/Apple.svg'
-        },
-        {
-            urlPick: 'src/img/Bosch.svg'
-        },
-        {
-            urlPick: 'src/img/Hp.svg'
-        },
-        {
-            urlPick: 'src/img/Acer.svg'
-        },
-        {
-            urlPick: 'src/img/ViewSonic.svg'
-        },
-        {
-            urlPick: 'src/img/Sony.svg'
-        }
-    ];
+        let array_elem = array[i];
 
-
-
-    let element = document.querySelector('.repairBar__main.firma');
-    console.log(element)
-
-    for (let i = 0; i <= FirmCardsData.length; i++){
-        let array_elem = FirmCardsData[i];
         let card = document.createElement('div');
         card.classList.add('repairBar__card');
-        card.classList.add('cardFirm');
-
-        let card_img = document.createElement('img');
-        card_img.classList.add('repairBar__icon')
-        card_img.src = array_elem.urlPick;
-        card_img.alt = array_elem.urlPick;
-        card.appendChild(card_img);
 
         let card_button = document.createElement('div');
         card_button.classList.add('repairBar__button');
+
+        if(array === FirmCardsData){
+            card.classList.add('cardFirm');
+
+            let card_img = document.createElement('img');
+            card_img.classList.add('repairBar__icon')
+            card_img.src = array_elem.urlPick;
+            card_img.alt = array_elem.urlPick;
+            card.appendChild(card_img);
+        }
+        if(array === ModelCardsData){
+            card.classList.add('cardModel');
+            let card_span = document.createElement('span');
+            card_span.classList.add('repairBar__text');
+            card_span.textContent = array_elem.head;
+            card.appendChild(card_span);
+            card_button.classList.add('cardModel');
+        }
+
         card.appendChild(card_button);
 
-        console.log(card);
         element.appendChild(card);
     }
 }
+
 

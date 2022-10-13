@@ -1,3 +1,4 @@
+/* Открыть меню */
 function OpenMenu(){
     let element = document.querySelector('.sidebar');
     let blur = document.querySelector('.blur');
@@ -7,6 +8,7 @@ function OpenMenu(){
     blur.style.opacity = '0.6';
 }
 
+/* Закрыть меню */
 function CloseMenu(){
     let element = document.querySelector('.sidebar');
     let blur = document.querySelector('.blur');

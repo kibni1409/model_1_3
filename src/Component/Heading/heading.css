@@ -1,20 +1,46 @@
+/* Заголовок */
 .heading {
     display: flex;
     justify-content: space-between;
     height: 40px;
 }
+@media screen and (max-width: 550px){
+    .heading{
+        padding-top: 24px;
+        padding-bottom: 16px;
+    }
+}
+@media (min-width: 551px) and (max-width: 1119px){
+    .heading{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+@media screen and  (min-width: 1120px){
+    .heading{
+        padding-top: 42px;
+        padding-bottom: 0;
+    }
+}
 
+
+/* Левая часть заголовка с текстом */
 .heading__left-block{
     display: flex;
     align-self: center;
 }
 
+
+/* Текст заголовка */
 .heading__text {
     font-size: 28px;
     font-family: TTLakes-Bold, sans-serif;
     line-height: 40px;
     align-self: center;
 }
+
+
+/* Цветная линия перед текстом заголовка */
 .heading__text:before{
     margin-right: 16px;
     display: block;
@@ -28,12 +54,41 @@
     border-bottom-right-radius: 10px;
     background: #41F6D7;
 }
+@media screen and (max-width: 550px){
+    .heading__text:before{
+        margin-right: 12px;
+    }
+}
+@media (min-width: 551px) and (max-width: 1119px){
+    .heading__text:before{
+        margin-right: 20px;
+    }
+}
+@media screen and  (min-width: 1120px){
+    .heading__text:before{
+        margin-right: 30px;
+    }
+}
 
+
+/* Правая часть заголовка с кнопками */
 .heading__right-block{
     display: flex;
     padding-right: 32px;
 }
+@media screen and (max-width: 550px){
+    .heading__right-block{
+        display: none;
+    }
+}
+@media (min-width: 551px) and (max-width: 1119px){
+    .heading__right-block{
+        display: none;
+    }
+}
 
+
+/* Расположение кнопок в правой части */
 .heading__button{
     margin-left: 32px;
     display: flex;
@@ -41,6 +96,8 @@
     flex-grow: 1;
 }
 
+
+/* Текст перед кнопками в правой части */
 .heading__button-text{
     margin-right: 9px;
     font-size: 16px;
@@ -48,43 +105,4 @@
     align-self: center;
     font-family: TTLakes-Regular, sans-serif;
     cursor: pointer;
-}
-
-/* Mobile */
-@media screen and (max-width: 550px){
-    .heading{
-        padding-top: 24px;
-        padding-bottom: 16px;
-    }
-    .heading__right-block{
-        display: none;
-    }
-    .heading__text:before{
-        margin-right: 12px;
-    }
-}
-
-/*  Tablet */
-@media (min-width: 551px) and (max-width: 1119px){
-    .heading{
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-    .heading__right-block{
-        display: none;
-    }
-    .heading__text:before{
-        margin-right: 20px;
-    }
-}
-
-/* Desktop*/
-@media screen and  (min-width: 1120px){
-    .heading{
-        padding-top: 42px;
-        padding-bottom: 0;
-    }
-    .heading__text:before{
-        margin-right: 30px;
-    }
 }

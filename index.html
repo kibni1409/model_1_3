@@ -1,9 +1,11 @@
 <html lang="ru">
+<!-- Подключение данных -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title>Макет 1.3</title>
     <link rel="preload" href="src/fonts/TTLakes-Black.ttf" as="font">
+    <!-- Подключение стилей -->
     <link href="src/Component/Menu/menu.css" rel="stylesheet">
     <link href="src/html.css" rel="stylesheet">
     <link href="src/Component/Information/information.css" rel="stylesheet">
@@ -13,12 +15,15 @@
     <link href="src/Component/SideBar/sidebar.css" rel="stylesheet">
     <link href="src/Component/PopupPanel/popupPanel.css" rel="stylesheet">
     <link href="src/Component/RepairBar/repairBar.css" rel="stylesheet">
+    <!-- Подключение логики -->
     <script src="./src/Component/Menu/menu.js"></script>
     <script src="./src/Component/Information/information.js"></script>
     <script src="src/Component/PopupPanel/popupPanel.js"></script>
     <script src="src/Component/RepairBar/repairBar.js"></script>
 </head>
-<body onload="FirmCards()">
+<!-- Тело сайта -->
+<body onload=" Cards(ModelCardsData); Cards(FirmCardsData); Size(); " onresize="Size()">
+<!-- Меню сайта -->
 <header class="menu hidden-desktop">
     <div class="menu__left-block">
         <div onclick="OpenMenu()" class="menu__button button button_menu "></div>
@@ -37,7 +42,9 @@
         <div class="menu__button button button_search"></div>
     </div>
 </header>
+<!-- Замутнение экрана -->
 <div onclick=" ClosePopupPanel('call'); ClosePopupPanel('feed'); CloseMenu()" class="blur"></div>
+<!-- Выпадающее меню -->
 <div class="sidebar">
     <div class="sidebar__menu menu">
         <div class="sidebar__menu menu__left-block">
@@ -113,7 +120,9 @@
         </footer>
     </main>
 </div>
+<!-- Блок с контентом -->
 <div class="body-block">
+    <!-- Заголовок -->
     <div class="heading">
         <div class="heading__left-block">
             <div class="heading__text">Услуги и сервисы</div>
@@ -129,6 +138,7 @@
             </div>
         </div>
     </div>
+    <!-- Навигационное меню -->
     <nav class="navigation__block">
         <ul class="navigation__list">
             <li class="navigation__item">
@@ -168,23 +178,21 @@
             </li>
         </ul>
     </nav>
+    <!-- Контент с информацией -->
     <div class="information">
         <div class="information__block">
             <div class="information__block-text">
-
                 Мы являемся авторизованным сервисным центром по ремонту техники Dell.
                 Только у нас вы можете отремонтировать свой ноутбук Dell с
                 официальной гарантией производителя.<br>
-
                 <br>
                 Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
                 что подтверждает большое количество постоянных клиентов.<br>
                 <br>
                 Мы гордимся тем, что к нам обращаются по рекомендациям и,
                 в свою очередь, советуют нас родным и близким.<br>
-
             </div>
-            <div onclick="ReadMore('info')" class="information__block-more">
+            <div onclick="ReadMore('info')" class="information__block-more info">
                 <div class="information__more-icon"></div>
                 <div class="information__more-text">Читать далее</div>
             </div>
@@ -193,7 +201,8 @@
             <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
         </div>
     </div>
-    <div onload="FirmCards()" class="repairBar">
+    <!-- Блок с карточками фирм -->
+    <div  class="repairBar">
         <div class="repairBar__heading">
             <span>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
         </div>
@@ -208,7 +217,24 @@
             <div class="information__more-text firma">Показать все</div>
         </div>
     </div>
+    <!-- Блок с карточками моделей -->
+    <div  class="repairBar">
+        <div class="repairBar__heading">
+            <span>РЕМОНТ РАЗЛИЧНЫХ ВЫДОВ ТЕХНИКИ</span>
+        </div>
+        <div class="repairBar__main model">
+            <div class="repairBar__card cardModel">
+                <span class="repairBar__text">Ремонт ноутбуков</span>
+                <div class="repairBar__button cardModel"></div>
+            </div>
+        </div>
+        <div onclick="ReadMore('model')" class="repairBar__more_model  information__block-more">
+            <div class="information__more-icon model"></div>
+            <div class="information__more-text model">Показать все</div>
+        </div>
+    </div>
 </div>
+<!-- Всплывающая панель с обратной связью -->
 <div class="popupPanel feedback">
     <div class="popupPanel__button">
         <div onclick="ClosePopupPanel('feed')" class="button button_cancel"></div>
@@ -226,9 +252,9 @@
             <textarea class="popupPanel__form-input" placeholder="Сообщение"></textarea>
             <p class="popupPanel__form-text">
                 Нажимая “отправить”, вы даете согласие на обработку
-                <a class="popupPanel__form-a" href="#">персональных данных</a>
+                <a class="popupPanel__form-link" href="#">персональных данных</a>
                 и соглашаетесь с нашей
-                <a class="popupPanel__form-a" href="#">политикой конфиденциальности</a>
+                <a class="popupPanel__form-link" href="#">политикой конфиденциальности</a>
             </p>
             <button class="popupPanel__form-button" type="submit">
                 ОТПРАВИТЬ
@@ -237,6 +263,7 @@
         </form>
     </div>
 </div>
+<!-- Всплывающая панель с обратным звонком -->
 <div class="popupPanel callback">
     <div class="popupPanel__button">
         <div onclick="ClosePopupPanel('call')" class="button button_cancel"></div>
@@ -251,9 +278,9 @@
             <input class="popupPanel__form-input" type="text" placeholder="Телефон">
             <p class="popupPanel__form-text">
                 Нажимая “отправить”, вы даете согласие на обработку
-                <a class="popupPanel__form-a" href="#">персональных данных</a>
+                <a class="popupPanel__form-link" href="#">персональных данных</a>
                 и соглашаетесь с нашей
-                <a class="popupPanel__form-a" href="#">политикой конфиденциальности</a>
+                <a class="popupPanel__form-link" href="#">политикой конфиденциальности</a>
             </p>
             <button class="popupPanel__form-button" type="submit">
                 ОТПРАВИТЬ

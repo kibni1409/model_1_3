@@ -1,3 +1,4 @@
+/* Блок меню */
 .menu{
     min-width: 280px;
     display: flex;
@@ -10,27 +11,69 @@
     padding-right: 20px;
     padding-left: 20px;
 }
+@media screen and (max-width: 550px) {
+    .menu{
+        justify-content:space-between;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+@media (min-width: 551px) and (max-width: 1119px){
+    .menu{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
 
+
+/* Левая часть меню */
 .menu__left-block{
     width: 153px;
     display: flex;
     justify-content: space-between;
     align-self: center;
 }
+@media screen and (max-width: 550px) {
+    .menu__left-block{
+        width: 153px;
+    }
+}
+@media (min-width: 551px) and (max-width: 1119px){
+    .menu__left-block{
+        width: 180px;
+    }
+}
 
+
+/* Правая часть меню */
 .menu__right-block{
     width: 300px;
     display: flex;
     justify-content: space-between;
     align-self: center;
 }
+@media screen and (max-width: 550px) {
+    .menu__right-block{
+        width: 100px;
+    }
+}
+@media screen and (min-width: 1120px){
+    .menu__right-block{
+        width: auto;
+    }
+}
 
+
+
+/* Логотип в меню */
 .menu__logo{
     height: 50px;
     width: 96px;
     cursor: pointer;
 }
 
+
+/* Разделитель между кнопок */
 .menu__divider{
     width: 2px;
     height: 32px;
@@ -39,58 +82,51 @@
     align-self: center;
 }
 
+
+/* Скрыть до десктопа */
 .hidden-desktop{
     display: flex;
 }
-
-.menu__button{
-    align-self: center;
-}
-
-/* Mobile */
-@media screen and (max-width: 550px) {
-    .hidden-mobile{
-        display: flex;
-    }
-    .hidden-tablet {
-        display: none;
-    }
-    .menu__left-block{
-        width: 153px;
-    }
-    .menu__right-block{
-        width: 100px;
-    }
-    .menu{
-        justify-content:space-between;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-}
-
-/* Tablet */
-@media (min-width: 551px) and (max-width: 1119px){
-    .hidden-mobile{
-        display: none;
-    }
-    .hidden-tablet{
-        display: flex;
-    }
-    .menu{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .menu__left-block{
-        width: 180px;
-    }
-}
-
-/* Desktop */
 @media screen and (min-width: 1120px){
     .hidden-desktop{
         display: none;
     }
-    .menu__right-block{
-        width: auto;
+}
+
+
+/* Скрыть в мобильном */
+.hidden-mobile{
+
+}
+@media screen and (max-width: 550px) {
+    .hidden-mobile{
+        display: flex;
     }
+}
+@media (min-width: 551px) and (max-width: 1119px){
+    .hidden-mobile{
+        display: none;
+    }
+}
+
+
+/* Скрыть на планшете */
+.hidden-tablet{
+
+}
+@media screen and (max-width: 550px) {
+    .hidden-tablet {
+        display: none;
+    }
+}
+@media (min-width: 551px) and (max-width: 1119px){
+    .hidden-tablet{
+        display: flex;
+    }
+}
+
+
+/* Расположение кнопок меню */
+.menu__button{
+    align-self: center;
 }

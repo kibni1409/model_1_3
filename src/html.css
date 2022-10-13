@@ -1,28 +1,31 @@
+/* Шрифты */
 @font-face {
     font-family: "TTLakes-Bold";
     src: url("fonts/TTLakes-Bold.woff") format("woff")
 }
-
 @font-face {
     font-family: "TTLakes-Regular";
     src: url("fonts/TTLakes-Regular.woff") format("woff");
 }
-
 @font-face {
     font-family: "TTLakes-Medium";
     src: url("fonts/TTLakes-Medium.woff") format("woff");
 }
-
 @font-face {
     font-family: "TTLakes-Black";
     src: url("fonts/TTLakes-Black.woff") format("woff");
 }
 
+
+/* Стиль для всего документа */
 html{
     padding: 0;
     overflow-x: hidden;
+    background-color: white;
 }
 
+
+/* Замутнение экрана */
 .blur{
     z-index: 2;
     display: none;
@@ -34,6 +37,8 @@ html{
     transition: opacity 2s;
 }
 
+
+/* Тело сайта */
 body{
     z-index: 1;
     display: flex;
@@ -42,12 +47,12 @@ body{
     margin: 0;
     background-color: #F8F8F8;
 }
-
-/* Desktop */
 @media screen and (min-width: 1120px){
     body{
         flex-direction: row;
     }
+}
+@media screen and (min-width: 1120px){
     .body-block{
         width: calc(100vw - 320px);
     }

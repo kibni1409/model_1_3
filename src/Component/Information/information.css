@@ -1,3 +1,4 @@
+/* Главный блок с контентом */
 .information{
     display: flex;
     max-width: 1060px;
@@ -8,11 +9,25 @@
     margin-left: auto;
     margin-right: auto;
 }
+@media screen and (max-width: 550px){
+    .information{
+        display: block;
+    }
+}
 
+
+/* Блок с информацией */
 .information__block{
     min-width: 272px;
 }
+@media (min-width: 551px) {
+    .information__content{
+        padding-left: 24px;
+    }
+}
 
+
+/* Блок с текстом */
 .information__block-text{
     font-size: 14px;
     margin-bottom: 18px;
@@ -27,23 +42,53 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+@media screen and (max-width: 550px){
+    .information__block-text{
+        max-width: 100%;
+    }
+}
+@media (min-width: 551px) and (max-width: 1119px){
+    .information__block-text{
+        padding-right: 24px;
+    }
+}
+@media (min-width: 1120px){
+    .information__block-text{
+        padding-right: 36px;
+        height: auto;
+    }
+}
 
+
+/* Блок с картинкой */
 .information__content-picture{
     width: 100%;
     object-fit: cover;
 }
+@media screen and (max-width: 550px){
+    .information__picture{
+        width: 100%;
+        height: auto;
+    }
+}
 
+
+/* Блок читать далее */
 .information__block-more{
     display: flex;
     margin-bottom: 16px;
     cursor: pointer;
 }
 
+
+/* Текс блока читать далее */
 .information__more-text{
     font-family: TTLakes-Medium, sans-serif;
     margin-left: 10px;
 }
 
+
+/* Иконка блока читать далее */
 .information__more-icon{
     width: 24px;
     height: 24px;
@@ -52,40 +97,4 @@
     background-repeat: no-repeat;
     background-position:center;
     object-fit: fill;
-}
-
-/* Mobile*/
-@media screen and (max-width: 550px){
-    .information{
-        display: block;
-    }
-    .information__picture{
-        width: 100%;
-        height: auto;
-    }
-    .information__block-text{
-        max-width: 100%;
-    }
-}
-
-/* Tablet */
-@media (min-width: 551px) and (max-width: 1119px){
-    .information__block-text{
-        padding-right: 24px;
-    }
-    .information__content{
-        padding-left: 24px;
-    }
-}
-
-/* Desktop */
-@media (min-width: 1120px){
-    .information__block-text{
-        padding-right: 36px;
-        height: auto;
-    }
-    .information__content{
-        padding-left: 24px;
-    }
-
 }

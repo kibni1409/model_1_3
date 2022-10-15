@@ -79,6 +79,14 @@
     margin-bottom: 16px;
     cursor: pointer;
 }
+@media screen and (max-width: 550px){
+    .information__block-more.repairBar__more_model{
+        display: none;
+    }
+    .information__block-more.repairBar__more_firma{
+        display: none;
+    }
+}
 
 
 /* Текс блока читать далее */

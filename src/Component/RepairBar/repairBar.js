@@ -19,7 +19,7 @@ let ModelCardsData = [
     {head: 'Ремонт телефонов'},
     {head: 'Ремонт электронных книг'},
     {head: 'Ремонт электронных часов'},
-]
+];
 
 /* Создание карточек фирм */
 function Cards(array){
@@ -27,11 +27,11 @@ function Cards(array){
     let element;
 
     if(array === FirmCardsData){
-        element = document.querySelector('.repairBar__main.firma');
-    }
+            element = document.querySelector('.repairBar__main.firma');
+        }
     if(array === ModelCardsData){
-        element = document.querySelector('.repairBar__main.model');
-    }
+            element = document.querySelector('.repairBar__main.model');
+        }
 
     for (let i = 0; i < array.length; i++){
 
@@ -54,6 +54,7 @@ function Cards(array){
         }
         if(array === ModelCardsData){
             card.classList.add('cardModel');
+
             let card_span = document.createElement('span');
             card_span.classList.add('repairBar__text');
             card_span.textContent = array_elem.head;
@@ -62,7 +63,6 @@ function Cards(array){
         }
 
         card.appendChild(card_button);
-
         element.appendChild(card);
     }
 }

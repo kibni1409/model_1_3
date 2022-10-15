@@ -1,5 +1,6 @@
 /* Всплывающая панель */
 .popupPanel{
+    float: left;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -8,6 +9,7 @@
     top: 0;
     width: 378px;
     height: 100vh;
+    min-height: 650px;
     background: #FFFFFF;
     transition: right 1s;
     box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);

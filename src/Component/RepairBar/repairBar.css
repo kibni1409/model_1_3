@@ -33,7 +33,7 @@
 }
 @media screen and (max-width: 550px){
     .repairBar__main{
-
+        display: none;
     }
 }
 @media (min-width: 1920px) {

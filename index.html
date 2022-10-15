@@ -15,11 +15,14 @@
     <link href="src/Component/SideBar/sidebar.css" rel="stylesheet">
     <link href="src/Component/PopupPanel/popupPanel.css" rel="stylesheet">
     <link href="src/Component/RepairBar/repairBar.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="src/Component/Slider/slider.css" rel="stylesheet">
     <!-- Подключение логики -->
     <script src="./src/Component/Menu/menu.js"></script>
     <script src="./src/Component/Information/information.js"></script>
     <script src="src/Component/PopupPanel/popupPanel.js"></script>
     <script src="src/Component/RepairBar/repairBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <!-- Тело сайта -->
 <body onload=" Cards(ModelCardsData); Cards(FirmCardsData); Size(); " onresize="Size()">
@@ -202,37 +205,168 @@
         </div>
     </div>
     <!-- Блок с карточками фирм -->
-    <div  class="repairBar">
+    <div class="repairBar">
         <div class="repairBar__heading">
             <span>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
         </div>
         <div class="repairBar__main firma">
-            <div class="repairBar__card cardFirm">
+           <!-- <div class="repairBar__card cardFirm">
                 <img class="repairBar__icon" src="src/img/Lenovo.svg" alt="Lenovo.svg">
                 <div class="repairBar__button"></div>
-            </div>
+            </div> -->
         </div>
         <div onclick="ReadMore('firma')" class="repairBar__more_firma  information__block-more">
             <div class="information__more-icon firma"></div>
             <div class="information__more-text firma">Показать все</div>
         </div>
+        <!-- Блок свайпера -->
+        <div class="swiper firma">
+            <!-- Дополнительная оболочка -->
+            <div class="swiper-wrapper firma">
+                 <!-- Слайды -->
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardFirm">
+                        <img class="repairBar__icon" src="src/img/Lenovo.svg" alt="Lenovo.svg">
+                        <div class="repairBar__button"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardFirm">
+                        <img class="repairBar__icon" src="src/img/Samsung.svg" alt="Lenovo.svg">
+                        <div class="repairBar__button"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardFirm">
+                        <img class="repairBar__icon" src="src/img/Apple.svg" alt="Lenovo.svg">
+                        <div class="repairBar__button"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardFirm">
+                        <img class="repairBar__icon" src="src/img/Bosch.svg" alt="Lenovo.svg">
+                        <div class="repairBar__button"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardFirm">
+                        <img class="repairBar__icon" src="src/img/Hp.svg" alt="Lenovo.svg">
+                        <div class="repairBar__button"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardFirm">
+                        <img class="repairBar__icon" src="src/img/Acer.svg" alt="Lenovo.svg">
+                        <div class="repairBar__button"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardFirm">
+                        <img class="repairBar__icon" src="src/img/ViewSonic.svg" alt="Lenovo.svg">
+                        <div class="repairBar__button"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardFirm">
+                        <img class="repairBar__icon" src="src/img/Sony.svg" alt="Lenovo.svg">
+                        <div class="repairBar__button"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Пагинация -->
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
     <!-- Блок с карточками моделей -->
-    <div  class="repairBar">
+    <div class="repairBar">
         <div class="repairBar__heading">
             <span>РЕМОНТ РАЗЛИЧНЫХ ВЫДОВ ТЕХНИКИ</span>
         </div>
         <div class="repairBar__main model">
-            <div class="repairBar__card cardModel">
+           <!-- <div class="repairBar__card cardModel">
                 <span class="repairBar__text">Ремонт ноутбуков</span>
                 <div class="repairBar__button cardModel"></div>
-            </div>
+            </div> -->
         </div>
         <div onclick="ReadMore('model')" class="repairBar__more_model  information__block-more">
             <div class="information__more-icon model"></div>
             <div class="information__more-text model">Показать все</div>
         </div>
+        <!-- Блок свайпера -->
+        <div class="swiper model">
+            <!-- Дополнительная оболочка -->
+            <div class="swiper-wrapper model">
+                <!-- Слайды -->
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardModel">
+                        <span class="repairBar__text">Ремонт ноутбуков</span>
+                        <div class="repairBar__button cardModel"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardModel">
+                        <span class="repairBar__text">Ремонт планшетов</span>
+                        <div class="repairBar__button cardModel"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardModel">
+                        <span class="repairBar__text">Ремонт ПК</span>
+                        <div class="repairBar__button cardModel"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardModel">
+                        <span class="repairBar__text">Ремонт мониторов</span>
+                        <div class="repairBar__button cardModel"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardModel">
+                        <span class="repairBar__text">Ремонт телефонов</span>
+                        <div class="repairBar__button cardModel"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardModel">
+                        <span class="repairBar__text">Ремонт электронных книг</span>
+                        <div class="repairBar__button cardModel"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="repairBar__card cardModel">
+                        <span class="repairBar__text">Ремонт электронных часов</span>
+                        <div class="repairBar__button cardModel"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Пагинация -->
+            <div class="swiper-pagination"></div>
+        </div>
     </div>
+
+    <!-- Настройки слайдера -->
+     <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+        const screenWidth = window.screen.width * 0.0036;
+        console.log(screenWidth);
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            spaceBetween: 16,
+            slidesPerView: screenWidth,
+            centeredSlides: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    </script>
 </div>
 <!-- Всплывающая панель с обратной связью -->
 <div class="popupPanel feedback">

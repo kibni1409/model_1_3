@@ -5,7 +5,6 @@
     flex-direction: column;
     width: 320px;
     min-width: 320px;
-
     margin-left: 0;
     background-color: white;
     transition: left 1s;
@@ -76,9 +75,14 @@
     display: flex;
     width: 320px;
     flex-direction: column;
-    overflow: hidden;
+    overflow: scroll;
     flex-wrap: nowrap;
 }
+.navigation__block .navigation__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 
 
 /* Подвал всплывающего меню */

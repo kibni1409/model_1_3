@@ -1,17 +1,18 @@
 /* Всплывающая панель */
 .popupPanel{
-    float: left;
-    z-index: 10;
+    overflow-x: auto;
+    float: right;
+    z-index: -2;
     display: flex;
+    left: -110vw;
     flex-direction: column;
     position: absolute;
-    right: -520px;
     top: 0;
+    transform: translateX(110vw);
     width: 378px;
     height: 100vh;
-    min-height: 650px;
     background: #FFFFFF;
-    transition: right 1s;
+    transition: transform 1s;
     box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
 }
 @media screen and (max-width: 1119px){

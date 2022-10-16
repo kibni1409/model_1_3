@@ -1,19 +1,28 @@
-/* Открытие всплывающего окна */
+/* Закрытие окна */
 function ClosePopupPanel(elem){
 
+    let element;
     /* Окно с обратной связью */
     if(elem === 'feed'){
-        let element = document.querySelector('.popupPanel.feedback');
-        element.style.right = '-520px';
+        element = document.querySelector('.popupPanel.feedback');
     }
     /* Окно с заказом звонка */
     if (elem === 'call'){
-        let element = document.querySelector('.popupPanel.callback');
-        element.style.right = '-520px';
+        element = document.querySelector('.popupPanel.callback');
     }
+
+    element.style.transform = 'translateX(110vw)';
+    setTimeout(() => {
+        element.style.zIndex = '-2';
+        element.style.left = '-110vw';
+    }, 500);
+
 
     let blur = document.querySelector('.blur');
     let sidebar = document.querySelector('.sidebar');
+    let html = document.getElementsByTagName('html');
+    html[0].style.overflowY = 'auto';
+
 
     /* Замутнение экрана */
     if(sidebar.style.left !== '0px'){
@@ -27,20 +36,26 @@ function ClosePopupPanel(elem){
 }
 
 
-/* Закрытие окна */
+/* Открытие всплывающего окна */
 function OpenPopupPanel(elem){
+
+    let element;
     /* Окно с обратной связью */
-    if(elem === 'feed'){
-        let element = document.querySelector('.popupPanel.feedback');
-        element.style.display = 'flex';
-        element.style.right = '0';
+    if (elem === 'feed') {
+        element = document.querySelector('.popupPanel.feedback');
     }
     /* Окно с заказом звонка */
     if (elem === 'call'){
-        let element = document.querySelector('.popupPanel.callback');
-        element.style.display = 'flex';
-        element.style.right = '0';
+        element = document.querySelector('.popupPanel.callback');
     }
+
+    element.style.display = 'flex';
+    element.style.left = '0';
+    element.style.zIndex = '10';
+    let html = document.getElementsByTagName('html');
+    html[0].style.overflowY = 'hidden';
+
+    setTimeout(() => {  element.style.transform = 'translateX(calc(100vw - 100%))'; }, 300);
 
     /* Замутнение экрана */
     let blur = document.querySelector('.blur');

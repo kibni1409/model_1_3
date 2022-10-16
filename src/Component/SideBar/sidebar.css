@@ -10,10 +10,12 @@
     transition: left 1s;
     box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
 }
+
+
 @media screen and (max-width: 1119px){
     .sidebar {
         display: flex;
-        position: absolute;
+        position: fixed;
         left: -400px;
         top: 0;
     }

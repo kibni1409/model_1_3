@@ -15,6 +15,7 @@ function ClosePopupPanel(elem){
     setTimeout(() => {
         element.style.zIndex = '-2';
         element.style.left = '-110vw';
+        element.style.top = '-150px';
     }, 500);
 
 

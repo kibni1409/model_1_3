@@ -7,7 +7,7 @@
     left: -110vw;
     flex-direction: column;
     position: absolute;
-    top: 0;
+    top: -150px;
     transform: translateX(110vw);
     width: 378px;
     height: 100vh;

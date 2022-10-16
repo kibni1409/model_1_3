@@ -52,6 +52,7 @@ function OpenPopupPanel(elem){
 
     element.style.display = 'flex';
     element.style.left = '0';
+    element.style.top = '0';
     element.style.zIndex = '10';
     let html = document.getElementsByTagName('html');
     html[0].style.overflowY = 'hidden';

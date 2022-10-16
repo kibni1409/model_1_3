@@ -1,6 +1,5 @@
 /* Всплывающая панель */
 .popupPanel{
-    overflow-x: auto;
     float: right;
     z-index: -2;
     display: flex;

@@ -21,34 +21,53 @@
 html{
     padding: 0;
     overflow-x: hidden;
+    overflow-y: auto;
     background-color: white;
     width: 100vw;
+}
+.html_dontOverflow{
+    overflow-y: hidden;
 }
 
 
 /* Замутнение экрана */
 .blur{
     z-index: 2;
-    display: none;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: #cccccc;
-    opacity: 0;
     transition: opacity 2s;
+}
+.blur_hidden{
+    opacity: 0;
+    display: none;
+}
+.blur_openMenu{
+    display: block;
+    opacity: 0.6;
+    z-index: 2;
+}
+.blur_openPopup{
+    display: block;
+    opacity: 0.6;
+    z-index: 7;
 }
 
 
 /* Тело сайта */
 body{
+    max-width: 1440px;
     z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 auto;
     background-color: #F8F8F8;
 }
+
 @media screen and (min-width: 1120px){
     body{
         flex-direction: row;
@@ -56,6 +75,6 @@ body{
 }
 @media screen and (min-width: 1120px){
     .body-block{
-        width: calc(100vw - 320px);
+        width: calc(1440px - 320px);
     }
 }

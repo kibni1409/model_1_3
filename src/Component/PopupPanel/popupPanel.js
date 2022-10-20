@@ -1,67 +1,79 @@
 /* Закрытие окна */
-function ClosePopupPanel(elem){
+function ClosePopupPanel(e){
 
     let element;
     /* Окно с обратной связью */
-    if(elem === 'feed'){
+    if(e.target.classList.contains('button_cancel')&& (e.target.classList.contains('feed'))){
         element = document.querySelector('.popupPanel.feedback');
     }
+
     /* Окно с заказом звонка */
-    if (elem === 'call'){
+    if (e.target.classList.contains('button_cancel') && (e.target.classList.contains('call'))){
         element = document.querySelector('.popupPanel.callback');
     }
 
-    element.style.transform = 'translateX(110vw)';
-    setTimeout(() => {
-        element.style.zIndex = '-2';
-        element.style.left = '-110vw';
-        element.style.top = '-150px';
-    }, 500);
+    if (e.target.classList.contains('blur')){
+        let elements = document.querySelectorAll('.popupPanel');
+        for(let i = 0; i < elements.length; i++){
+            if (elements[i].classList.contains('popupPanel__hidden')){
 
+            }
+            else {
+                element = elements[i];
+            }
+        }
+    }
 
-    let blur = document.querySelector('.blur');
-    let sidebar = document.querySelector('.sidebar');
-    let html = document.getElementsByTagName('html');
-    html[0].style.overflowY = 'auto';
+    if(element){
+        element.classList.add('popupPanel__hidden');
+    }
+    let html = document.querySelector('html');
+    html.classList.remove('html_dontOverflow');
 
 
     /* Замутнение экрана */
-    if(sidebar.style.left !== '0px'){
-        blur.style.opacity = '0';
-        blur.style.display = 'none';
-        blur.style.zIndex = '2';
-    }
-    else{
-        blur.style.zIndex = '2';
-    }
+    let blur = document.querySelector('.blur');
+    blur.classList.add('blur_hidden');
+    blur.classList.remove('blur_openPopup');
 }
 
 
 /* Открытие всплывающего окна */
-function OpenPopupPanel(elem){
+function OpenPopupPanel(e){
 
     let element;
     /* Окно с обратной связью */
-    if (elem === 'feed') {
+    if (e.target.classList.contains('button_message')) {
         element = document.querySelector('.popupPanel.feedback');
     }
     /* Окно с заказом звонка */
-    if (elem === 'call'){
+    if (e.target.classList.contains('button_call')){
         element = document.querySelector('.popupPanel.callback');
     }
 
-    element.style.display = 'flex';
-    element.style.left = '0';
-    element.style.top = '0';
-    element.style.zIndex = '10';
-    let html = document.getElementsByTagName('html');
-    html[0].style.overflowY = 'hidden';
+    element.classList.remove('popupPanel__hidden');
 
-    setTimeout(() => {  element.style.transform = 'translateX(calc(100vw - 100%))'; }, 300);
+    let html = document.querySelector('html');
+    html.classList.add('html_dontOverflow');
+
 
     /* Замутнение экрана */
     let blur = document.querySelector('.blur');
-    blur.style.display = 'block';
-    blur.style.opacity = '0.6';
-    blur.style.zIndex = '7';
+    blur.classList.remove('blur_hidden');
+    blur.classList.add('blur_openPopup');
 }
+
+document.addEventListener("DOMContentLoaded", function (){
+    let openButton = document.querySelectorAll('.openPopup');
+    for (let i = 0; i < openButton.length; i++){
+        openButton[i].addEventListener('click', OpenPopupPanel);
+    }
+
+    let closeButton = document.querySelectorAll('.closePopup');
+    for (let i = 0; i < closeButton.length; i++){
+        closeButton[i].addEventListener('click', ClosePopupPanel);
+    }
+
+    let blur = document.querySelector('.blur');
+    blur.addEventListener('click', ClosePopupPanel);
+});

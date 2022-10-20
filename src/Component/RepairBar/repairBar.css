@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #F2F2F2;;
+    background-color: #F8F8F8;
 }
 
 
@@ -14,8 +14,7 @@
     font-size: 16px;
     color: #7E7E82;
     font-family: TTLakes-Regular, sans-serif;
-
-    background: linear-gradient(90deg,  #F2F2F2 10%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(90deg,  #F8F8F8 10%, rgba(255,255,255,1) 100%);
 }
 
 
@@ -31,29 +30,42 @@
     align-self: center;
     overflow: hidden;
 }
-@media screen and (max-width: 550px){
-    .repairBar__main{
-        display: none;
-    }
+
+.repairBar__main.price{
+    width: calc(100% - 48px);
+    display: flex;
+    flex-direction: column;
 }
-@media (min-width: 1920px) {
-    .repairBar__main {
-        width: 1328px;
-    }
+
+.repairBar__main_expanded{
+    height: auto;
 }
-@media (min-width: 1370px) and (max-width: 1919px){
+
+.repairBar__main.price{
+  height: auto;
+}
+/* 4 */
+@media screen and (min-width: 1370px){
     .repairBar__main{
         width: 1056px;
     }
 }
-@media (min-width: 800px ) and (max-width: 1369px){
+/* 3 */
+@media (min-width: 800px ) and ( max-width: 1369px){
     .repairBar__main{
         width: 740px;
     }
 }
+/* 2 */
 @media (min-width: 551px) and (max-width: 799px){
     .repairBar__main{
         width: 488px;
+    }
+}
+/* Слайдер */
+@media screen and (max-width: 550px){
+    .repairBar__main{
+        display: none;
     }
 }
 
@@ -92,28 +104,24 @@
 .repairBar__card:nth-child(4n){
     margin-right: 0;
 }
+/* 2 */
 @media (min-width: 551px) and (max-width: 799px){
     .repairBar__card:nth-child(2n){
         margin-right: 0;
     }
 }
+/* 3 */
 @media (min-width: 800px ) and (max-width: 1369px){
     .repairBar__card:nth-child(3n){
         margin-right: 0;
     }
-}
-@media (min-width: 1920px) {
-    .repairBar__card:nth-child(4n) {
-        margin-right: 32px;
-    }
-}
-@media (min-width: 800px ) and (max-width: 1369px){
     .repairBar__card:nth-child(4n){
         margin-right: 32px;
     }
 }
-@media (min-width: 1920px) {
-    .repairBar__card:nth-child(5n) {
+/* 4 */
+@media (min-width: 1370px){
+    .repairBar__card:nth-child(4n){
         margin-right: 0;
     }
 }
@@ -164,6 +172,61 @@
     border: 2px solid white;
 }
 
+
+/* Таблица прайса */
+.repairBar__cardPrice{
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #FFFFFF;
+    font-family: TTLakes-Regular, sans-serif;
+    width: auto;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    text-align: start;
+    align-items: center;
+    box-shadow: 0 -22px 0 -21px #EAEAEA;
+}
+.repairBar__cardPrice:first-child{
+    color: #7E7E82;
+    background-color: #F8F8F8;
+    box-shadow: none;
+}
+.repairBar__cardPrice:first-child > button{
+    z-index: -200;
+}
+.repairBar__cardPrice:nth-child(2){
+    border-radius: 10px 10px 0 0;
+    box-shadow: none;
+}
+.repairBar__cardPrice:last-child{
+    border-radius: 0 0 10px 10px;
+}
+
+.name{
+    flex-grow: 4;
+    width: 324px;
+}
+.pricec{
+    flex-grow: 2;
+    width: 100px;
+}
+.time{
+    flex-grow: 2;
+    width: 100px;
+}
+.buttonc{
+    align-self: center;
+    text-align: center;
+    flex-grow: 1;
+    width: 119px;
+}
+
+.repairBar__more_model{
+    padding-left: 24px;
+}
 .repairBar__more_firma{
-    padding-left: 32px;
+    padding-left: 24px;
 }

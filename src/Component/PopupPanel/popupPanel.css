@@ -1,19 +1,21 @@
 /* Всплывающая панель */
 .popupPanel{
-    float: right;
-    z-index: -2;
+    z-index: 10;
     display: flex;
-    left: -110vw;
     flex-direction: column;
     position: absolute;
-    top: -150px;
-    transform: translateX(110vw);
     width: 378px;
+    right: 0;
     height: 100vh;
     background: #FFFFFF;
     transition: transform 1s;
     box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
 }
+/* Скрытие панели */
+.popupPanel__hidden{
+    transform: translateX(600px);
+}
+
 @media screen and (max-width: 1119px){
     .popupPanel{
         width: 288px;
@@ -117,6 +119,7 @@
     border-radius: 16px;
     transition: background-color 0.5s;
     align-self: end;
+    cursor: pointer;
 }
 .popupPanel__form-button:hover{
     background-color: #b01d4a;

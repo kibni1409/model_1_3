@@ -42,6 +42,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.information__block-text_maxHeight{
+    max-height: none;
+    height: auto;
+}
 @media screen and (max-width: 550px){
     .information__block-text{
         max-width: 100%;
@@ -79,6 +83,9 @@
     margin-bottom: 16px;
     cursor: pointer;
 }
+.information__block-more_hidden{
+    display: none;
+}
 @media screen and (max-width: 550px){
     .information__block-more.repairBar__more_model{
         display: none;
@@ -95,7 +102,6 @@
     margin-left: 10px;
 }
 
-
 /* Иконка блока читать далее */
 .information__more-icon{
     width: 24px;
@@ -105,4 +111,8 @@
     background-repeat: no-repeat;
     background-position:center;
     object-fit: fill;
+    transform: rotate(0deg);
+}
+.information__more-icon_rotate{
+    transform: rotate(180deg);
 }

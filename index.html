@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title>Макет 1.3</title>
-    <link rel="preload" href="src/fonts/TTLakes-Black.ttf" as="font">
     <!-- Подключение стилей -->
     <link href="src/Component/Menu/menu.css" rel="stylesheet">
     <link href="src/html.css" rel="stylesheet">
@@ -15,6 +14,7 @@
     <link href="src/Component/SideBar/sidebar.css" rel="stylesheet">
     <link href="src/Component/PopupPanel/popupPanel.css" rel="stylesheet">
     <link href="src/Component/RepairBar/repairBar.css" rel="stylesheet">
+    <link href="src/Component/Footer/footer.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet"/>
     <link href="src/Component/Slider/slider.css" rel="stylesheet">
     <!-- Подключение логики -->
@@ -25,11 +25,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <!-- Тело сайта -->
-<body onload=" Cards(ModelCardsData); Cards(FirmCardsData); Size(); " onresize="Size()">
+<body>
 <!-- Меню сайта -->
 <header class="menu hidden-desktop">
     <div class="menu__left-block">
-        <div onclick="OpenMenu()" class="menu__button button button_menu "></div>
+        <div class="menu__button button button_menu"></div>
         <div class="menu__divider hidden-tablet"></div>
         <div class="menu__logo">
             <img src="src/img/Logo.svg" alt="Logo.svg"/>
@@ -37,8 +37,8 @@
     </div>
     <div class="menu__divider hidden-mobile "></div>
     <div class="menu__right-block">
-        <div onclick="OpenPopupPanel('call')" class="menu__button button button_call hidden-tablet"></div>
-        <div onclick="OpenPopupPanel('feed')" class="menu__button button button_message hidden-tablet"></div>
+        <div class="menu__button button button_call openPopup hidden-tablet"></div>
+        <div class="menu__button button button_message openPopup hidden-tablet"></div>
         <div class="menu__button button button_profile hidden-tablet"></div>
         <div class="menu__divider hidden-tablet"></div>
         <div class="menu__button button button_tools"></div>
@@ -46,12 +46,12 @@
     </div>
 </header>
 <!-- Замутнение экрана -->
-<div onclick=" ClosePopupPanel('call'); ClosePopupPanel('feed'); CloseMenu()" class="blur"></div>
+<div class="blur blur_hidden"></div>
 <!-- Выпадающее меню -->
 <div class="sidebar">
     <div class="sidebar__menu menu">
         <div class="sidebar__menu menu__left-block">
-            <div onclick="CloseMenu()" class="menu__button button button_cancel"></div>
+            <div class="menu__button button button_cancel"></div>
             <div class="menu__logo">
                 <img src="src/img/Logo.svg" alt="Logo.svg"/>
             </div>
@@ -108,8 +108,8 @@
         <footer class="sidebar__footer">
             <div class="sidebar__contacts">
                 <div class="sidebar__contacts-buttons">
-                    <div onclick="OpenPopupPanel('call')" class="button button_call "></div>
-                    <div onclick="OpenPopupPanel('feed')" class="button button_message "></div>
+                    <div class="button button_call openPopup"></div>
+                    <div class="button button_message openPopup "></div>
                     <div class="button button_profile "></div>
                 </div>
                 <p class="sidebar__contacts-email">mail@cps.com</p>
@@ -195,9 +195,9 @@
                 Мы гордимся тем, что к нам обращаются по рекомендациям и,
                 в свою очередь, советуют нас родным и близким.<br>
             </div>
-            <div onclick="ReadMore('info')" class="information__block-more info">
-                <div class="information__more-icon"></div>
-                <div class="information__more-text">Читать далее</div>
+            <div class="information__block-more info">
+                <div class="information__more-icon info"></div>
+                <div class="information__more-text info">Читать далее</div>
             </div>
         </div>
         <div class="information__content">
@@ -210,12 +210,12 @@
             <span>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
         </div>
         <div class="repairBar__main firma">
-           <!-- <div class="repairBar__card cardFirm">
-                <img class="repairBar__icon" src="src/img/Lenovo.svg" alt="Lenovo.svg">
-                <div class="repairBar__button"></div>
-            </div> -->
+            <!-- <div class="repairBar__card cardFirm">
+                 <img class="repairBar__icon" src="src/img/Lenovo.svg" alt="Lenovo.svg">
+                 <div class="repairBar__button"></div>
+             </div> -->
         </div>
-        <div onclick="ReadMore('firma')" class="repairBar__more_firma  information__block-more">
+        <div class="repairBar__more_firma firma information__block-more">
             <div class="information__more-icon firma"></div>
             <div class="information__more-text firma">Показать все</div>
         </div>
@@ -223,7 +223,7 @@
         <div class="swiper firma">
             <!-- Дополнительная оболочка -->
             <div class="swiper-wrapper firma">
-                 <!-- Слайды -->
+                <!-- Слайды -->
                 <div class="swiper-slide">
                     <div class="repairBar__card cardFirm">
                         <img class="repairBar__icon" src="src/img/Lenovo.svg" alt="Lenovo.svg">
@@ -283,12 +283,12 @@
             <span>РЕМОНТ РАЗЛИЧНЫХ ВЫДОВ ТЕХНИКИ</span>
         </div>
         <div class="repairBar__main model">
-           <!-- <div class="repairBar__card cardModel">
-                <span class="repairBar__text">Ремонт ноутбуков</span>
-                <div class="repairBar__button cardModel"></div>
-            </div> -->
+            <!-- <div class="repairBar__card cardModel">
+                 <span class="repairBar__text">Ремонт ноутбуков</span>
+                 <div class="repairBar__button cardModel"></div>
+             </div> -->
         </div>
-        <div onclick="ReadMore('model')" class="repairBar__more_model  information__block-more">
+        <div class="repairBar__more_model model information__block-more">
             <div class="information__more-icon model"></div>
             <div class="information__more-text model">Показать все</div>
         </div>
@@ -344,9 +344,44 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
+    <!-- Блок с прайсом -->
+    <div class="repairBar">
+        <div class="repairBar__heading">
+            <span>ЦЕНЫ НА УСЛУГИ</span>
+        </div>
+        <div class="repairBar__main price">
+            <!-- <dib class="repairBar__cardPrice cardPrice_heading">
+                 <span class="name">Ремонт услуги</span>
+                 <span class="pricec">Цена</span>
+                 <span class="time">Срок</span>
+                 <button class="buttonc popupPanel__form-button" type="submit">
+                     ЗАКАЗАТЬ
+                     <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
+                 </button>
+             </dib> -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__heading_paragraph">
+            Все цены указаны с учетом НДС. Стоимость ремонта указана
+            на единичную услугу. Для получения коммерческого
+            предложения на постоянное обслуживание, оставьте заявку.
+        </p>
+        <a class="footer__heading_a">
+            Получить коммерческое предложение
+            <img class="popupPanel__form-button_image" src="./src/img/ArrowPink.svg" alt="ArrowPink.svg"/>
+        </a>
+
+        <div class="footer__footer">
+            <div class="footer__p1">© 2019 CPS Разработано командой Apesong</div>
+            <div class="footer__p2">Политика конфиденциальности</div>
+            <div class="footer__p3">Информация, размещенная на данной странице, не является публичной офертой</div>
+        </div>
+    </footer>
 
     <!-- Настройки слайдера -->
-     <script type="module">
+    <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
         const screenWidth = window.screen.width * 0.0036;
@@ -368,9 +403,9 @@
     </script>
 </div>
 <!-- Всплывающая панель с обратной связью -->
-<div class="popupPanel feedback">
+<div class="popupPanel popupPanel__hidden feedback ">
     <div class="popupPanel__button">
-        <div onclick="ClosePopupPanel('feed')" class="button button_cancel"></div>
+        <div class="button button_cancel feed closePopup"></div>
     </div>
     <div class="popupPanel__heading heading">
         <div class="heading__left-block">
@@ -397,9 +432,9 @@
     </div>
 </div>
 <!-- Всплывающая панель с обратным звонком -->
-<div class="popupPanel callback">
+<div class="popupPanel popupPanel__hidden callback">
     <div class="popupPanel__button">
-        <div onclick="ClosePopupPanel('call')" class="button button_cancel"></div>
+        <div class="button button_cancel call closePopup"></div>
     </div>
     <div class="popupPanel__heading heading">
         <div class="heading__left-block">

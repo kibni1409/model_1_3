@@ -44,14 +44,11 @@
     white-space: nowrap;
     font-size: 16px;
     color: #7E7E82;
+    border-radius: 10px;
     font-family: TTLakes-Regular, sans-serif;
 }
 .navigation__button:hover{
-    border-color: #B8FFEC;
-    border-width: 2px;
-    border-radius: 10px;
-    border-style: solid;
-    cursor: pointer;
+    box-shadow: 0 0 0 2px #B8FFEC;
 }
 
 
@@ -62,4 +59,8 @@
     border-width: 2px;
     border-radius: 10px;
     border-style: solid;
+}
+
+.navigation__button.active:hover{
+    box-shadow: none;
 }

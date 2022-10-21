@@ -35,15 +35,13 @@
     width: calc(100% - 48px);
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 .repairBar__main_expanded{
     height: auto;
 }
 
-.repairBar__main.price{
-  height: auto;
-}
 /* 4 */
 @media screen and (min-width: 1370px){
     .repairBar__main{
@@ -65,6 +63,9 @@
 /* Слайдер */
 @media screen and (max-width: 550px){
     .repairBar__main{
+        display: none;
+    }
+    .repairBar__main.price{
         display: none;
     }
 }
@@ -126,6 +127,37 @@
     }
 }
 
+/* Карточка прайса */
+.repairBar__card.cardPrice{
+    width: 228px;
+    height: 184px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: TTLakes-Regular,sans-serif;
+    font-size: 14px;
+}
+.priceCard__name{
+
+}
+.priceCard__name > .name{
+    color: #7E7E82;
+}
+.priceCard__pricec{
+
+}
+.priceCard__pricec > .pricec{
+    color: #7E7E82;
+}
+.priceCard__buttonc{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.buttonc.popupPanel__form-button{
+    width: 120px;
+}
 
 /* Иконка карточки */
 .repairBar__icon{

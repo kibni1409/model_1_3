@@ -1,66 +1,68 @@
-/* Блок навигации */
-.navigation__block{
-    padding-top: 8px;
-    padding-left: 24px;
-    padding-right: 24px;
-    display: flex;
-    overflow: scroll;
+.navigation {
+  padding-top: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-overflow-style: none;
+  overflow: auto;
+}
+.navigation__block {
+  -ms-overflow-style: none;
+  overflow: scroll;
+  padding-top: 10px;
 }
 .navigation__block::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 }
-
-
-/* Список пунктов */
-.navigation__list{
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 10px 10px 10px;
+}
+@media screen and (min-width: 1120px) {
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    padding: 0;
+  }
 }
-@media screen and (min-width: 1120px){
-    .navigation__list{
-        display: flex;
-    }
-}
-@media screen and (max-width: 1119px){
-    .navigation__list{
+@media screen and (max-width: 1119px) {
+  .navigation__list {
+    -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    }
+  }
 }
-
-
-/* Пункты списка */
-.navigation__item{
-    list-style-type: none;
+.navigation__item {
+  list-style-type: none;
 }
-
-
-/* Кнопка элемента */
-.navigation__button{
-    border: none;
-    background: none;
-    padding: 7px 8px 7px 8px;
-    white-space: nowrap;
-    font-size: 16px;
-    color: #7E7E82;
-    border-radius: 10px;
-    font-family: TTLakes-Regular, sans-serif;
+.navigation__button {
+  border: none;
+  background: none;
+  padding: 7px 8px 7px 8px;
+  white-space: nowrap;
+  font-size: 16px;
+  color: #7E7E82;
+  border-radius: 10px;
+  font-family: TTLakes-Regular, sans-serif;
 }
-.navigation__button:hover{
-    box-shadow: 0 0 0 2px #B8FFEC;
+.navigation__button:hover {
+  -webkit-box-shadow: 0 0 0 2px #B8FFEC;
+          box-shadow: 0 0 0 2px #B8FFEC;
 }
-
-
-/* Активный пункт */
-.active{
-    background-color: #FFFFFF;
-    border-color: #B8FFEC;
-    border-width: 2px;
-    border-radius: 10px;
-    border-style: solid;
+.navigation__button_active {
+  background-color: #FFFFFF;
+  border-color: #B8FFEC;
+  border-width: 2px;
+  border-radius: 10px;
+  border-style: solid;
 }
-
-.navigation__button.active:hover{
-    box-shadow: none;
+.navigation__button_active:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }

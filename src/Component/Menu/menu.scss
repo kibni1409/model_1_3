@@ -1,0 +1,134 @@
+// Блок меню
+.menu{
+  min-width: 280px;
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  left: 0;
+  top: 0;
+  background: #FFFFFF;
+  box-shadow: 0 2px #D9FFF5;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  // Левая часть меню
+  &__leftBlock{
+    width: 153px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+
+    // Мобильный вариант
+    @media screen and (max-width: 550px) {
+      & {
+        width: 153px;
+      }
+    }
+    // Планшетный вариант
+    @media (min-width: 551px) and (max-width: 1119px){
+      & {
+        width: 180px;
+      }
+    }
+  }
+  // Правая часть меню
+  &__rightBlock{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+
+    // Мобильный вариант
+    @media screen and (max-width: 550px) {
+      & {
+        width: 100px;
+      }
+    }
+    // Десктопный вариант
+    @media screen and (min-width: 1120px){
+      & {
+        width: auto;
+      }
+    }
+  }
+  // Логотип в меню
+  &__logo{
+    height: 50px;
+    width: 96px;
+    cursor: pointer;
+  }
+  // Разделитель между кнопок
+  &__divider{
+    width: 2px;
+    height: 32px;
+    background-color:#EAEAEA;
+    border-radius: 1px;
+    align-self: center;
+  }
+  // Расположение кнопок меню
+  &__button{
+    align-self: center;
+  }
+
+  // Мобильный вариант
+  @media screen and (max-width: 550px) {
+    & {
+      justify-content:space-between;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  // Планшетный вариант
+  @media (min-width: 551px) and (max-width: 1119px){
+    & {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+// Скрыть до десктопа
+.hidden-desktop{
+  display: flex;
+
+  // Десктопный вариант
+  @media screen and (min-width: 1120px){
+    & {
+      display: none;
+    }
+  }
+}
+// Скрыть в немобильном варианте
+.hidden-mobile{
+
+  // Мобильный вариант
+  @media screen and (max-width: 550px) {
+    & {
+      display: flex;
+    }
+  }
+  // Планшетный вариант
+  @media (min-width: 551px) and (max-width: 1119px){
+    & {
+      display: none;
+    }
+  }
+}
+// Скрыть в непланшетном варианте
+.hidden-tablet{
+
+
+  // Мобильный вариант
+  @media screen and (max-width: 550px) {
+    & {
+      display: none;
+    }
+  }
+  // Планшетный вариант
+  @media (min-width: 551px) and (max-width: 1119px){
+    & {
+      display: flex;
+    }
+  }
+}

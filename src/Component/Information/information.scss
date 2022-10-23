@@ -1,0 +1,131 @@
+// Главный блок с контентом
+.information{
+  display: flex;
+  max-width: 1060px;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-right: 28px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // Блок с информацией
+  &__block{
+    min-width: 272px;
+  }
+  // Контент
+  &__content{
+
+    @media (min-width: 551px) {
+      & {
+        padding-left: 24px;
+      }
+    }
+  }
+  // Блок с текстом
+  &__blockText{
+    font-size: 14px;
+    margin-bottom: 18px;
+    margin-top: 0;
+    color:#1B1C21;
+    font-family: TTLakes-Regular, sans-serif;
+    min-width: 270px;
+    max-width: 45vw;
+    min-height: 80px;
+    max-height: none;
+    height: 11em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    // Развернутый текст
+    &_maxHeight{
+      max-height: none;
+      height: auto;
+    }
+
+    // Мобильный вариант
+    @media screen and (max-width: 550px){
+      & {
+        max-width: 100%;
+      }
+    }
+    // Планшетный вариант
+    @media (min-width: 551px) and (max-width: 1119px){
+      & {
+        padding-right: 24px;
+      }
+    }
+    // Десктопный вариант
+    @media (min-width: 1120px){
+      & {
+        padding-right: 36px;
+        height: auto;
+      }
+    }
+  }
+  // Блок с картинкой
+  &__contentPicture {
+    width: 100%;
+    object-fit: cover;
+  }
+  // Картинка
+  &__picture{
+
+    // Мобильный вариант
+    @media screen and (max-width: 550px){
+      & {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  // Блок читать далее
+  &__blockMore{
+    display: flex;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    // Скрыть
+    &_hidden{
+      display: none;
+    }
+
+    // Мобильный вариант
+    @media screen and (max-width: 550px){
+      &.repairBar__more{
+        display: none;
+      }
+      &.repairBar__more{
+        display: none;
+      }
+    }
+  }
+  // Текс блока читать далее
+  &__moreText{
+    font-family: TTLakes-Medium, sans-serif;
+    margin-left: 10px;
+  }
+  // Иконка блока читать далее
+  &__moreIcon{
+    width: 24px;
+    height: 24px;
+    margin: auto 0 auto 0;
+    background-image: url("../../img/More.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+    transform: rotate(0deg);
+
+    // Поворот
+    &_rotate{
+      transform: rotate(180deg);
+    }
+  }
+
+  // Мобильный вариант
+  @media screen and (max-width: 550px){
+    &{
+      display: block;
+    }
+  }
+}

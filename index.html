@@ -28,7 +28,7 @@
 <body>
 <!-- Меню сайта -->
 <header class="menu hidden-desktop">
-    <div class="menu__left-block">
+    <div class="menu__leftBlock">
         <div class="menu__button button button_menu"></div>
         <div class="menu__divider hidden-tablet"></div>
         <div class="menu__logo">
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="menu__divider hidden-mobile "></div>
-    <div class="menu__right-block">
+    <div class="menu__rightBlock">
         <div class="menu__button button button_call openPopup hidden-tablet"></div>
         <div class="menu__button button button_message openPopup hidden-tablet"></div>
         <div class="menu__button button button_profile hidden-tablet"></div>
@@ -50,13 +50,13 @@
 <!-- Выпадающее меню -->
 <div class="sidebar">
     <div class="sidebar__menu menu">
-        <div class="sidebar__menu menu__left-block">
+        <div class="sidebar__menu menu__leftBlock">
             <div class="menu__button button button_cancel"></div>
             <div class="menu__logo">
                 <img src="src/img/Logo.svg" alt="Logo.svg"/>
             </div>
         </div>
-        <div class="sidebar__menu menu__right-block">
+        <div class="sidebar__menu menu__rightBlock">
             <div class="menu__button button button_search"></div>
         </div>
     </div>
@@ -64,12 +64,12 @@
         <nav class="sidebar__navigation navigation__block">
             <ul class="navigation__list">
                 <li class="navigation__item">
-                    <button class="navigation__button active">
+                    <button class="navigation__button">
                         Ремонт техники
                     </button>
                 </li>
                 <li class="navigation__item">
-                    <button class="navigation__button">
+                    <button class="navigation__button sidebar__button_active heading__text">
                         Услуги и сервисы
                     </button>
                 </li>
@@ -107,45 +107,45 @@
         </nav>
         <footer class="sidebar__footer">
             <div class="sidebar__contacts">
-                <div class="sidebar__contacts-buttons">
+                <div class="sidebar__contactButtons">
                     <div class="button button_call openPopup"></div>
                     <div class="button button_message openPopup "></div>
                     <div class="button button_profile "></div>
                 </div>
-                <p class="sidebar__contacts-email">mail@cps.com</p>
-                <span class="sidebar__contacts-phone">8 800 890 8900</span>
+                <p class="sidebar__contactEmail">mail@cps.com</p>
+                <span class="sidebar__contactPhone">8 800 890 8900</span>
             </div>
-            <ul class="sidebar__footer-lang">
-                <li class="active-lang">RU</li>
-                <li>EN</li>
-                <li>CH</li>
+            <ul class="sidebar__footerLang">
+                <li class="sidebar__footerLang_active">RU</li>
+                <li class="sidebar__footerLang_inactive">EN</li>
+                <li class="sidebar__footerLang_inactive">CH</li>
             </ul>
         </footer>
     </main>
 </div>
 <!-- Блок с контентом -->
-<div class="body-block">
+<main class="body-block">
     <!-- Заголовок -->
     <div class="heading">
-        <div class="heading__left-block">
+        <div class="heading__leftBlock">
             <div class="heading__text">Услуги и сервисы</div>
         </div>
-        <div class="heading__right-block">
+        <div class="heading__rightBlock">
             <div class="heading__button">
-                <div class="heading__button-text">Оставить заявку</div>
+                <div class="heading__textForButton">Оставить заявку</div>
                 <div class="button button_tools"></div>
             </div>
             <div class="heading__button">
-                <div class="heading__button-text">Статус ремонта</div>
+                <div class="heading__textForButton">Статус ремонта</div>
                 <div class="button button_search"></div>
             </div>
         </div>
     </div>
     <!-- Навигационное меню -->
-    <nav class="navigation__block">
-        <ul class="navigation__list">
+    <nav class="navigation">
+        <ul class="navigation__list navigation__block">
             <li class="navigation__item">
-                <button class="navigation__button active">
+                <button class="navigation__button navigation__button_active">
                     Рекомендуемые устройства
                 </button>
             </li>
@@ -184,7 +184,7 @@
     <!-- Контент с информацией -->
     <div class="information">
         <div class="information__block">
-            <div class="information__block-text">
+            <div class="information__blockText">
                 Мы являемся авторизованным сервисным центром по ремонту техники Dell.
                 Только у нас вы можете отремонтировать свой ноутбук Dell с
                 официальной гарантией производителя.<br>
@@ -195,13 +195,13 @@
                 Мы гордимся тем, что к нам обращаются по рекомендациям и,
                 в свою очередь, советуют нас родным и близким.<br>
             </div>
-            <div class="information__block-more info">
-                <div class="information__more-icon info"></div>
-                <div class="information__more-text info">Читать далее</div>
+            <div class="information__blockMore info">
+                <div class="information__moreIcon info"></div>
+                <div class="information__moreText info">Читать далее</div>
             </div>
         </div>
         <div class="information__content">
-            <img class="information__content-picture" src="src/img/Information.png" alt="Information.png"/>
+            <img class="information__contentPicture" src="src/img/Information.png" alt="Information.png"/>
         </div>
     </div>
     <!-- Блок с карточками фирм -->
@@ -215,9 +215,9 @@
                  <div class="repairBar__button"></div>
              </div> -->
         </div>
-        <div class="repairBar__more_firma firma information__block-more">
-            <div class="information__more-icon firma"></div>
-            <div class="information__more-text firma">Показать все</div>
+        <div class="repairBar__more firma information__blockMore">
+            <div class="information__moreIcon firma"></div>
+            <div class="information__moreText firma">Показать все</div>
         </div>
         <!-- Блок свайпера -->
         <div class="swiper firma">
@@ -288,9 +288,9 @@
                  <div class="repairBar__button cardModel"></div>
              </div> -->
         </div>
-        <div class="repairBar__more_model model information__block-more">
-            <div class="information__more-icon model"></div>
-            <div class="information__more-text model">Показать все</div>
+        <div class="repairBar__more model information__blockMore">
+            <div class="information__moreIcon model"></div>
+            <div class="information__moreText model">Показать все</div>
         </div>
         <!-- Блок свайпера -->
         <div class="swiper model">
@@ -300,43 +300,43 @@
                 <div class="swiper-slide">
                     <div class="repairBar__card cardModel">
                         <span class="repairBar__text">Ремонт ноутбуков</span>
-                        <div class="repairBar__button cardModel"></div>
+                        <div class="repairBar__button"></div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardModel">
                         <span class="repairBar__text">Ремонт планшетов</span>
-                        <div class="repairBar__button cardModel"></div>
+                        <div class="repairBar__button"></div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardModel">
                         <span class="repairBar__text">Ремонт ПК</span>
-                        <div class="repairBar__button cardModel"></div>
+                        <div class="repairBar__button"></div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardModel">
                         <span class="repairBar__text">Ремонт мониторов</span>
-                        <div class="repairBar__button cardModel"></div>
+                        <div class="repairBar__button"></div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardModel">
                         <span class="repairBar__text">Ремонт телефонов</span>
-                        <div class="repairBar__button cardModel"></div>
+                        <div class="repairBar__button"></div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardModel">
                         <span class="repairBar__text">Ремонт электронных книг</span>
-                        <div class="repairBar__button cardModel"></div>
+                        <div class="repairBar__button"></div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardModel">
                         <span class="repairBar__text">Ремонт электронных часов</span>
-                        <div class="repairBar__button cardModel"></div>
+                        <div class="repairBar__button"></div>
                     </div>
                 </div>
             </div>
@@ -367,141 +367,111 @@
                 <!-- Слайды -->
                 <div class="swiper-slide">
                     <div class="repairBar__card cardPrice">
-                        <div class="priceCard__name">
-                            <span class="name">Ремонт услуги</span><br>
+                        <div class="cardPrice__cellName">
+                            <span class="cellName">Ремонт услуги</span><br>
                             <span>Тестирование с выдачей технического заключения</span>
                         </div>
-                        <div class="priceCard__pricec">
-                            <span class="pricec">Цена</span><br>
+                        <div class="cardPrice__cellPrice">
+                            <span class="cellPrice">Цена</span><br>
                             <span>Бесплатно</span>
                         </div>
-                        <div class="priceCard__buttonc">
-                            <div>
-                                <span class="time">Срок</span><br>
+                        <div class="cardPrice__cellButton">
+                            <div class="cardPrice__cellTime">
+                                <span class="cellTime">Срок</span><br>
                                 <span>30-120 мин</span>
                             </div>
-                            <button class="buttonc popupPanel__form-button" type="submit">
+                            <button class="cellButton form__button" type="submit">
                                 ЗАКАЗАТЬ
-                                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardPrice">
-                        <div class="priceCard__name">
-                            <span class="name">Ремонт услуги</span>
+                        <div class="cardPrice__cellName">
+                            <span class="cellName">Ремонт услуги</span><br>
                             <span>Тестирование с выдачей технического заключения</span>
                         </div>
-                        <div class="priceCard__pricec">
-                            <span class="pricec">Цена</span>
+                        <div class="cardPrice__cellPrice">
+                            <span class="cellPrice">Цена</span><br>
                             <span>Бесплатно</span>
                         </div>
-                        <div class="priceCard__buttonc">
-                            <div>
-                                <span class="time">Срок</span><br>
+                        <div class="cardPrice__cellButton">
+                            <div class="cardPrice__cellTime">
+                                <span class="cellTime">Срок</span><br>
                                 <span>30-120 мин</span>
                             </div>
-
-                            <button class="buttonc popupPanel__form-button" type="submit">
+                            <button class="cellButton form__button" type="submit">
                                 ЗАКАЗАТЬ
-                                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
+
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardPrice">
-                        <div class="priceCard__name">
-                            <span class="name">Ремонт услуги</span>
+                        <div class="cardPrice__cellName">
+                            <span class="cellName">Ремонт услуги</span><br>
                             <span>Тестирование с выдачей технического заключения</span>
                         </div>
-                        <div class="priceCard__pricec">
-                            <span class="pricec">Цена</span>
+                        <div class="cardPrice__cellPrice">
+                            <span class="cellPrice">Цена</span><br>
                             <span>Бесплатно</span>
                         </div>
-                        <div class="priceCard__buttonc">
-                            <div>
-                                <span class="time">Срок</span><br>
+                        <div class="cardPrice__cellButton">
+                            <div class="cardPrice__cellTime">
+                                <span class="cellTime">Срок</span><br>
                                 <span>30-120 мин</span>
                             </div>
-
-                            <button class="buttonc popupPanel__form-button" type="submit">
+                            <button class="cellButton form__button" type="submit">
                                 ЗАКАЗАТЬ
-                                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardPrice">
-                        <div class="priceCard__name">
-                            <span class="name">Ремонт услуги</span>
+                        <div class="cardPrice__cellName">
+                            <span class="cellName">Ремонт услуги</span><br>
                             <span>Тестирование с выдачей технического заключения</span>
                         </div>
-                        <div class="priceCard__pricec">
-                            <span class="pricec">Цена</span>
+                        <div class="cardPrice__cellPrice">
+                            <span class="cellPrice">Цена</span><br>
                             <span>Бесплатно</span>
                         </div>
-                        <div class="priceCard__buttonc">
-                            <div>
-                                <span class="time">Срок</span><br>
+                        <div class="cardPrice__cellButton">
+                            <div class="cardPrice__cellTime">
+                                <span class="cellTime">Срок</span><br>
                                 <span>30-120 мин</span>
                             </div>
-
-                            <button class="buttonc popupPanel__form-button" type="submit">
+                            <button class="cellButton form__button" type="submit">
                                 ЗАКАЗАТЬ
-                                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="repairBar__card cardPrice">
-                        <div class="priceCard__name">
-                            <span class="name">Ремонт услуги</span>
+                        <div class="cardPrice__cellName">
+                            <span class="cellName">Ремонт услуги</span><br>
                             <span>Тестирование с выдачей технического заключения</span>
                         </div>
-                        <div class="priceCard__pricec">
-                            <span class="pricec">Цена</span>
+                        <div class="cardPrice__cellPrice">
+                            <span class="cellPrice">Цена</span><br>
                             <span>Бесплатно</span>
                         </div>
-                        <div class="priceCard__buttonc">
-                            <div>
-                                <span class="time">Срок</span><br>
+                        <div class="cardPrice__cellButton">
+                            <div class="cardPrice__cellTime">
+                                <span class="cellTime">Срок</span><br>
                                 <span>30-120 мин</span>
                             </div>
-
-                            <button class="buttonc popupPanel__form-button" type="submit">
+                            <button class="cellButton form__button" type="submit">
                                 ЗАКАЗАТЬ
-                                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="repairBar__card cardPrice">
-                        <div class="priceCard__name">
-                            <span class="name">Ремонт услуги</span>
-                            <span>Тестирование с выдачей технического заключения</span>
-                        </div>
-                        <div class="priceCard__pricec">
-                            <span class="pricec">Цена</span>
-                            <span>Бесплатно</span>
-                        </div>
-                        <div class="priceCard__buttonc">
-                            <div>
-                                <span class="time">Срок</span><br>
-                                <span>30-120 мин</span>
-                            </div>
 
-                            <button class="buttonc popupPanel__form-button" type="submit">
-                                ЗАКАЗАТЬ
-                                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- Пагинация -->
             <div class="swiper-pagination"></div>
@@ -509,20 +479,20 @@
     </div>
     <!-- Подвал -->
     <footer class="footer">
-        <p class="footer__heading_paragraph">
+        <p class="footer__paragraph">
             Все цены указаны с учетом НДС. Стоимость ремонта указана
             на единичную услугу. Для получения коммерческого
             предложения на постоянное обслуживание, оставьте заявку.
         </p>
-        <a class="footer__heading_a">
+        <a class="footer__link">
             Получить коммерческое предложение
-            <img class="popupPanel__form-button_image" src="./src/img/ArrowPink.svg" alt="ArrowPink.svg"/>
+            <!--<img class="popupPanel__form buttonForm__image" src="./src/img/ArrowPink.svg" alt="ArrowPink.svg"/> -->
         </a>
 
-        <div class="footer__footer">
-            <div class="footer__p1">© 2019 CPS Разработано командой Apesong</div>
-            <div class="footer__p2">Политика конфиденциальности</div>
-            <div class="footer__p3">Информация, размещенная на данной странице, не является публичной офертой</div>
+        <div class="footer__basement">
+            <div class="footer__information">© 2019 CPS Разработано командой Apesong</div>
+            <div class="footer__information">Политика конфиденциальности</div>
+            <div class="footer__information">Информация, размещенная на данной странице, не является публичной офертой</div>
         </div>
     </footer>
 
@@ -547,32 +517,31 @@
             }
         });
     </script>
-</div>
+</main>
 <!-- Всплывающая панель с обратной связью -->
 <div class="popupPanel popupPanel__hidden feedback ">
     <div class="popupPanel__button">
         <div class="button button_cancel feed closePopup"></div>
     </div>
     <div class="popupPanel__heading heading">
-        <div class="heading__left-block">
+        <div class="heading__lefBlock">
             <div class="heading__text">Обратная связь</div>
         </div>
     </div>
     <div class="popupPanel__main">
         <form class="popupPanel__form">
-            <input class="popupPanel__form-input" type="text" placeholder="Имя">
-            <input class="popupPanel__form-input" type="text" placeholder="Фамилия">
-            <input class="popupPanel__form-input" type="email" placeholder="Электронная почта">
-            <textarea class="popupPanel__form-input" placeholder="Сообщение"></textarea>
-            <p class="popupPanel__form-text">
+            <input class="form__input" type="text" placeholder="Имя">
+            <input class="form__input" type="text" placeholder="Фамилия">
+            <input class="form__input" type="email" placeholder="Электронная почта">
+            <textarea class="form__input" placeholder="Сообщение"></textarea>
+            <p class="form__text">
                 Нажимая “отправить”, вы даете согласие на обработку
-                <a class="popupPanel__form-link" href="#">персональных данных</a>
+                <a class="form__link" href="#">персональных данных</a>
                 и соглашаетесь с нашей
-                <a class="popupPanel__form-link" href="#">политикой конфиденциальности</a>
+                <a class="form__link" href="#">политикой конфиденциальности</a>
             </p>
-            <button class="popupPanel__form-button" type="submit">
+            <button class="form__button" type="submit">
                 ОТПРАВИТЬ
-                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
             </button>
         </form>
     </div>
@@ -589,16 +558,15 @@
     </div>
     <div class="popupPanel__main">
         <form class="popupPanel__form">
-            <input class="popupPanel__form-input" type="text" placeholder="Телефон">
-            <p class="popupPanel__form-text">
+            <input class="form__input" type="text" placeholder="Телефон">
+            <p class="form__text">
                 Нажимая “отправить”, вы даете согласие на обработку
-                <a class="popupPanel__form-link" href="#">персональных данных</a>
+                <a class="form__link" href="#">персональных данных</a>
                 и соглашаетесь с нашей
-                <a class="popupPanel__form-link" href="#">политикой конфиденциальности</a>
+                <a class="form__link" href="#">политикой конфиденциальности</a>
             </p>
-            <button class="popupPanel__form-button" type="submit">
+            <button class="form__button" type="submit">
                 ОТПРАВИТЬ
-                <img class="popupPanel__form-button_image" src="./src/img/Arrow.svg" alt="Arrow.svg"/>
             </button>
         </form>
     </div>

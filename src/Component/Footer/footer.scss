@@ -1,0 +1,90 @@
+// Подвал сайта
+.footer{
+  width: 100%;
+  background-color: #F8F8F8;
+  padding: 24px 0 0 0;
+  height: 292px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // Текст подвала
+  &__paragraph{
+    padding-right: 24px;
+    padding-left: 24px;
+    max-width: 421px;
+    min-width: 260px;
+    color: #1B1C21;
+    font-family: TTLakes-Regular, sans-serif;
+    font-size: 14px;
+  }
+
+  // Ссылка в подвале
+  &__link{
+    display: inline-block;
+    padding: 0 40px 40px 24px;
+    align-self: start;
+    align-items: center;
+    cursor: pointer;
+
+    &::after{
+      margin-left: 10px;
+      display:  inline-block;
+      content:"";
+      font-size: 16px;
+      background-image: url("./../../img/ArrowPink.svg");
+      background-repeat: no-repeat;
+      background-position:center;
+      object-fit: fill;
+      height: 10px;
+      width: 6px;
+      align-self: center;
+      align-items: center;
+    }
+  }
+
+
+
+  // Самый низ подвала
+  &__basement{
+    padding-left: 24px;
+    padding-right: 24px;
+    border-top: 1px solid #D9FFF5;
+    height: 145px;
+    color: #7E7E82;
+    font-family: TTLakes-Regular, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 550px){
+      flex-direction: column;
+    }
+  }
+
+  // Элементы самого нижнего блока
+  &__information{
+    align-self: center;
+    align-items: center;
+    width: 330px;
+    padding-bottom: 20px;
+
+    &:nth-child(1){
+      text-align: start;
+
+      @media screen and (max-width: 550px) {
+        text-align: center;
+      }
+    }
+    &:nth-child(2){
+      text-align: center;
+    }
+    &:nth-child(3){
+      text-align: end;
+
+      @media screen and (max-width: 550px) {
+        text-align: center;
+      }
+    }
+  }
+}

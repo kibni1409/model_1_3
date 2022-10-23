@@ -1,4 +1,4 @@
-/* Кнопка */
+// Кнопка
 .button{
   width: 40px;
   height: 40px;
@@ -6,57 +6,46 @@
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.5s ;
+
+  // Наведение на кнопку
+  &:hover{
+    background-color: #b01d4a;
+  }
 }
-/* Наведение на кнопку */
-.button:hover{
-  background-color: #b01d4a;
+
+// Общий стиль кнопок
+@mixin buttonStyle($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position:center;
+  object-fit: fill;
 }
-/* Стиль кнопки меню */
+
+// Стиль кнопки меню
 .button_menu{
-  background-image: url("../../img/Menu.svg");
-  background-repeat: no-repeat;
-  background-position:center;
-  object-fit: fill;
+  @include buttonStyle("../../img/Menu.svg");
 }
-/* Стиль кнопки вызова */
+// Стиль кнопки вызова
 .button_call{
-  background-image: url("../../img/Call.svg");
-  background-repeat: no-repeat;
-  background-position:center;
-  object-fit: fill;
+  @include buttonStyle("../../img/Call.svg");
 }
-/* Стиль кнопки сообщения */
+// Стиль кнопки сообщения
 .button_message{
-  background-image: url("../../img/Message.svg");
-  background-repeat: no-repeat;
-  background-position:center;
-  object-fit: fill;
+  @include buttonStyle("../../img/Message.svg");
 }
-/* Стиль кнопки профиля */
+// Стиль кнопки профиля
 .button_profile{
-  background-image: url("../../img/Profile.svg");
-  background-repeat: no-repeat;
-  background-position:center;
-  object-fit: fill;
+  @include buttonStyle("../../img/Profile.svg");
 }
-/* Стиль кнопки инструментов */
+// Стиль кнопки инструментов
 .button_tools{
-  background-image: url("../../img/Tools.svg");
-  background-repeat: no-repeat;
-  background-position:center;
-  object-fit: fill;
+  @include buttonStyle("../../img/Tools.svg");
 }
-/* Стиль кнопки поиска */
+// Стиль кнопки поиска
 .button_search{
-  background-image: url("../../img/Search.svg");
-  background-repeat: no-repeat;
-  background-position:center;
-  object-fit: fill;
+  @include buttonStyle("../../img/Search.svg");
 }
-/* Стиль кнопки отмены */
+// Стиль кнопки отмены
 .button_cancel{
-  background-image: url("../../img/Cancel.svg");
-  background-repeat: no-repeat;
-  background-position:center;
-  object-fit: fill;
+  @include buttonStyle("../../img/Cancel.svg");
 }

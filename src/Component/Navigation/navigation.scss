@@ -1,0 +1,74 @@
+// Блок навигации
+.navigation{
+  padding-top: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  -ms-overflow-style: none;
+  overflow: auto;
+
+  //
+  &__block{
+    -ms-overflow-style: none;
+    overflow: scroll;
+    padding-top: 10px;
+
+    // Скрытие скрола
+    &::-webkit-scrollbar{
+      width: 0;
+      height: 0;
+    }
+  }
+  // Список пунктов
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px 10px 10px ;
+
+    // Десктопная версия
+    @media screen and (min-width: 1120px){
+      & {
+        display: flex;
+      }
+    }
+    // Додесктопная версия
+    @media screen and (max-width: 1119px){
+      & {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+  // Пункты списка
+  &__item{
+    list-style-type: none;
+  }
+  // Кнопка элемента
+  &__button{
+    border: none;
+    background: none;
+    padding: 7px 8px 7px 8px;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #7E7E82;
+    border-radius: 10px;
+    font-family: TTLakes-Regular, sans-serif;
+
+    // Тень при наведении
+    &:hover{
+      box-shadow: 0 0 0 2px #B8FFEC;
+    }
+    // Активный пункт
+    &_active{
+      background-color: #FFFFFF;
+      border-color: #B8FFEC;
+      border-width: 2px;
+      border-radius: 10px;
+      border-style: solid;
+
+      // Отмена выделения активного пункта
+      &:hover{
+        box-shadow: none;
+      }
+    }
+  }
+}

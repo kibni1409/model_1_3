@@ -99,7 +99,6 @@ function Cards(array){
             card_span.classList.add('repairBar__text');
             card_span.textContent = array_elem.head;
             card.appendChild(card_span);
-            card_button.classList.add('cardModel');
         }
         if(array === PriceCardsData){
 
@@ -127,25 +126,25 @@ function PriceCards(array){
         }
 
         let name = document.createElement('span');
-        name.classList.add('name');
+        name.classList.add('cellName');
         name.textContent = array_elem.name;
 
         let price = document.createElement('span');
-        price.classList.add('pricec');
+        price.classList.add('cellPrice');
         price.textContent = array_elem.price;
 
         let time = document.createElement('span');
-        time.classList.add('time');
+        time.classList.add('cellTime');
         time.textContent = array_elem.time;
 
         let button = document.createElement('button');
-        button.classList.add('buttonc');
-        button.classList.add('popupPanel__form-button');
+        button.classList.add('cellButton');
+        button.classList.add('form__button');
         button.type = 'submit';
         button.textContent = 'ЗАКАЗАТЬ';
 
         let img = document.createElement('img');
-        img.classList.add('popupPanel__form-button_image');
+        img.classList.add('buttonForm__image');
         img.src = "./src/img/Arrow.svg";
         img.alt = "./src/img/Arrow.svg";
 

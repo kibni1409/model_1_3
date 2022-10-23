@@ -1,0 +1,54 @@
+// Свайпер
+.swiper{
+  padding-top: 16px;
+
+  // Свайпер фирм
+  & .firma{
+    width: calc(100vw - 32px);
+    height: 100px;
+    z-index: 25;
+
+    // Планшетный вариант
+    @media screen and (min-width: 551px){
+      &{
+        display: none;
+      }
+    }
+  }
+  // Свайпер моделей
+  & .model{
+    width: calc(100vw - 32px);
+    height: 210px;
+
+    // Планшетный вариант
+    @media screen and (min-width: 551px){
+      &{
+        display: none;
+      }
+    }
+  }
+  // Свайпер прайса
+  & .price{
+    width: calc(100vw - 32px);
+    height: 260px;
+
+    // Планшетный вариант
+    @media screen and (min-width: 551px){
+      &{
+        display: none;
+      }
+    }
+  }
+  // Кружки пагинации
+  &-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    line-height: 20px;
+    font-size: 14px;
+    background-color: #b9b8b8;
+  }
+  // Активный кружок
+  &-pagination-bullet-active{
+    background-color: #B5B6BC;
+  }
+}

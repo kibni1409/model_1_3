@@ -19,7 +19,6 @@
 
 /* Стиль для всего документа */
 html{
-    padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: white;
@@ -75,6 +74,7 @@ body{
 }
 @media screen and (min-width: 1120px){
     .body-block{
-        width: calc(1440px - 320px);
+        max-width: calc(1440px - 320px);
+        width: calc(100vw - 320px);
     }
 }

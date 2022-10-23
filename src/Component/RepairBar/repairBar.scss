@@ -1,0 +1,280 @@
+// Общий блок для карточек
+.repairBar{
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #F8F8F8;
+
+  // Заголовок у блока для карточек
+  &__heading{
+    padding: 16px 16px 16px 32px;
+    font-size: 16px;
+    color: #7E7E82;
+    font-family: TTLakes-Regular, sans-serif;
+    background: linear-gradient(90deg,  #F8F8F8 10%, rgba(255,255,255,1) 100%);
+  }
+  // Центральный блок для карточек
+  &__main{
+    padding: 24px 16px 0 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    height: 176px;
+    width: 1056px;
+    align-self: center;
+    overflow: hidden;
+
+    // Прайс
+    &.price{
+      width: calc(100% - 48px);
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+    // Развернутый
+    &_expanded{
+      height: auto;
+    }
+
+    // 4 ячейки
+    @media screen and (min-width: 1370px){
+      & {
+        width: 1056px;
+      }
+    }
+    // 3 ячейки
+    @media (min-width: 800px ) and ( max-width: 1369px){
+      & {
+        width: 740px;
+      }
+    }
+    // 2
+    @media (min-width: 551px) and (max-width: 799px){
+      & {
+        width: 488px;
+      }
+    }
+    // Слайдер
+    @media screen and (max-width: 550px){
+      & {
+        display: none;
+      }
+      &.price{
+        display: none;
+      }
+    }
+  }
+  // Карточка
+  &__card{
+    margin-right: 32px;
+    margin-bottom: 16px;
+    width: 204px;
+    display: flex;
+
+    justify-content: space-between;
+    padding: 16px;
+    background: #FFFFFF;
+    border-radius: 6px;
+
+    // Четвертая карточка
+    &:nth-child(4n){
+      margin-right: 0;
+
+      // Третья карточка
+      @media (min-width: 800px ) and (max-width: 1369px){
+        &{
+          margin-right: 32px;
+        }
+      }
+      // Четвертая карточка
+      @media (min-width: 1370px){
+        &{
+          margin-right: 0;
+        }
+      }
+    }
+    // Сжатие карточки
+    @media (min-width: 551px ) and (max-width: 1369px){
+      & {
+        width: 188px;
+      }
+    }
+  }
+  // Иконка карточки
+  &__icon{
+    min-height: 40px;
+    max-width: 132px;
+    display: flex;
+    justify-content: start;
+  }
+  // Текс карточки
+  &__text{
+    font-family: TTLakes-Bold, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+  }
+  // Кнопка в карточке
+  &__button{
+    box-sizing: border-box;
+    width: 40px;
+    max-width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 20px;
+    background-image: url("./../../img/ArrowPink.svg");
+    background-repeat: no-repeat;
+    background-position:center;
+    object-fit: fill;
+    cursor: pointer;
+    transition: background-color, 1s;
+    align-self: end;
+
+    // Наведение на кнопку
+    &:hover{
+      background-color: #b01d4a;
+      background-image: url("./../../img/Arrow.svg");
+      border: 2px solid white;
+    }
+  }
+  // Таблица прайса
+  &__cardPrice{
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: #FFFFFF;
+    font-family: TTLakes-Regular, sans-serif;
+    width: auto;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    text-align: start;
+    align-items: center;
+    box-shadow: 0 -22px 0 -21px #EAEAEA;
+
+    // Заголовок
+    &:first-child{
+      color: #7E7E82;
+      background-color: #F8F8F8;
+      box-shadow: none;
+
+      // Кнопка заголовка
+      & > button{
+        z-index: -200;
+      }
+    }
+    // Первый прайс
+    &:nth-child(2){
+      border-radius: 10px 10px 0 0;
+      box-shadow: none;
+    }
+    // Последний прайс
+    &:last-child{
+      border-radius: 0 0 10px 10px;
+    }
+  }
+  // Показать все
+  &__more{
+    padding-left: 24px;
+  }
+}
+// Третья карточка
+@media (min-width: 800px ) and (max-width: 1369px){
+  .repairBar__card:nth-child(3n){
+    margin-right: 0;
+  }
+}
+
+// Вторая карточка
+@media (min-width: 551px) and (max-width: 799px){
+  .repairBar__card:nth-child(2n){
+    margin-right: 0;
+  }
+}
+
+// Карточки фирмы
+.cardFirm {
+  height: 40px;
+}
+// Карточки моделей
+.cardModel{
+  height: 128px;
+  flex-direction: column;
+}
+// Карточка прайса
+.cardPrice{
+  width: 228px;
+  height: 184px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: TTLakes-Regular, sans-serif;
+  font-size: 14px;
+
+  // Заголовок с названием
+  &__cellName{
+
+    // Название
+    & > .cellName{
+      color: #7E7E82;
+    }
+  }
+  // Заголовок с прайсом
+  &__cellPrice{
+
+    // Стоимость
+    & > .cellPrice{
+      color: #7E7E82;
+    }
+  }
+  // Заголовок со сроком
+  &__cellTime{
+
+    // Время
+    & > .cellTime{
+      color: #7E7E82;
+    }
+  }
+  // Ячейка с кнопкой
+  &__cellButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+// Ячейка с названием
+.cellName{
+  flex-grow: 4;
+  max-width: 324px;
+  width: 30%;
+  padding-right: 10px;
+}
+// Ячейка с ценой
+.cellPrice{
+  padding-right: 10px;
+  flex-grow: 2;
+  max-width: 100px;
+  width: 15%;
+}
+// Ячейка со сроком
+.cellTime{
+  flex-grow: 2;
+  width: 100px;
+}
+// Ячейка с кнопкой
+.cellButton{
+  align-self: center;
+  text-align: center;
+  flex-grow: 1;
+  max-width: 119px;
+  width: 15%;
+
+  // Уменьшить кнопку из формы
+  &.form__button{
+    width: 120px;
+  }
+}

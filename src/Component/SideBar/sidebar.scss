@@ -1,0 +1,156 @@
+// Всплывающее меню
+.sidebar{
+  z-index: 5;
+  display: none;
+  flex-direction: column;
+  width: 320px;
+  min-width: 320px;
+  margin-left: 0;
+  background-color: white;
+  transition: 1s;
+  box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+
+  // Открытое
+  &_open{
+    transform: translateX(400px);
+  }
+  // Меню всплывающего блока
+  &__menu{
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+
+    // Додесктопный вариант
+    @media screen and (max-width: 1119px){
+      & .menu__leftBlock{
+        width: 160px;
+      }
+      & .menu__rightBlock{
+        width: 40px;
+      }
+    }
+    // Десктопный вариант
+    @media screen and (min-width: 1120px){
+      & .menu__leftBlock{
+        width: 120px;
+      }
+      & .menu__rightBlock{
+        width: 40px;
+      }
+    }
+  }
+  // Основная часть меню
+  &__main{
+    width: 320px;
+    height: calc(100vh - 88px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  // Активный пункт
+  &__button_active{
+    position: relative;
+    font-size: 16px;
+    padding-left: 0;
+    transform: translateX(-26px);
+
+    &:hover{
+      box-shadow: none;
+    }
+  }
+  // Навигационная часть
+  &__navigation .navigation__list{
+    padding-left: 26px;
+    padding-bottom: 5px;
+    display: flex;
+    width: 320px;
+    flex-direction: column;
+    overflow: scroll;
+    flex-wrap: nowrap;
+
+    // Скрытие скролбара
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  // Подвал всплывающего меню
+  &__footer{
+    padding: 0 24px 24px 24px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 196px;
+  }
+  // Расположение кнопок
+  &__contactButtons{
+    width: 152px;
+    display: flex;
+    justify-content: space-between;
+  }
+  // Блок с почтой
+  &__contactEmail{
+    font-size: 16px;
+    color: #1B1C21;
+    font-family: TTLakes-Black, sans-serif;
+  }
+  // Блок с номером телефона
+  &__contactPhone{
+    font-size: 24px;
+    color: #1B1C21;
+    letter-spacing: -0.6px;
+    font-family: TTLakes-Bold, sans-serif;
+  }
+  // Блок с номером телефона
+  &__footerLang{
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    height: 22px;
+    font-size: 16px;
+    font-family: TTLakes-Regular, sans-serif;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    // Выбранный язык сайта
+    &_active{
+      color: #7E7E82;
+      font-size: 16px;
+      font-family: TTLakes-Regular, sans-serif;
+    }
+    // Неактивные языки сайта
+    &_inactive{
+      color: #1B1C21;
+      align-self: center;
+      cursor: pointer;
+    }
+  }
+
+  // Додесктоптный вариант
+  @media screen and (max-width: 1119px){
+    & {
+      display: flex;
+      position: fixed;
+      left: -400px;
+      top: 0;
+    }
+  }
+  // Десктопный вариант
+  @media screen and (min-width: 1120px){
+    & {
+      display: flex;
+      box-shadow: none;
+    }
+  }
+}
+
+// Скрыть кнопку закрытия меню
+@media screen and (min-width: 1120px){
+  .menu__button.button.button_cancel{
+    display: none;
+  }
+}
+

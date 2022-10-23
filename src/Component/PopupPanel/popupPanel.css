@@ -1,134 +1,157 @@
-/* Всплывающая панель */
-.popupPanel{
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
+@charset "UTF-8";
+.popupPanel {
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 378px;
+  right: 0;
+  height: 100vh;
+  background: #FFFFFF;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+          box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+}
+.popupPanel__hidden {
+  -webkit-transform: translateX(600px);
+          transform: translateX(600px);
+}
+.popupPanel__button {
+  padding-left: 16px;
+  height: 40px;
+  width: 40px;
+}
+@media screen and (min-width: 1120px) {
+  .popupPanel__button {
+    display: inline-block;
     position: absolute;
+    left: -84px;
+    top: 32px;
+  }
+}
+.popupPanel__heading.heading {
+  padding-top: 0;
+}
+@media screen and (max-width: 1119px) {
+  .popupPanel__heading.heading {
+    padding-top: 40px;
+  }
+}
+.popupPanel__form {
+  padding: 24px 16px 16px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (max-width: 1119px) {
+  .popupPanel {
+    width: 288px;
+    padding: 16px 0 24px 0;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .popupPanel {
     width: 378px;
-    right: 0;
-    height: 100vh;
-    background: #FFFFFF;
-    transition: transform 1s;
-    box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
-}
-/* Скрытие панели */
-.popupPanel__hidden{
-    transform: translateX(600px);
+    padding: 32px 16px 24px 0;
+  }
 }
 
-@media screen and (max-width: 1119px){
-    .popupPanel{
-        width: 288px;
-        padding: 16px 0 24px 0;
-    }
+.form__input {
+  color: #B5B6BC;
+  font-size: 16px;
+  padding: 12px 0 12px 16px;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  font-family: TTLakes-Bold, sans-serif;
+  margin-bottom: 16px;
 }
-@media screen and (min-width: 1120px){
-    .popupPanel{
-        width: 378px;
-        padding: 32px 16px 24px 0;
-    }
+.form__input::-webkit-input-placeholder {
+  color: #B5B6BC;
 }
-
-
-/* Кнопки всплывающей панели */
-.popupPanel__button{
-    padding-left: 16px;
-    height: 40px;
-    width: 40px;
+.form__input::-moz-placeholder {
+  color: #B5B6BC;
 }
-@media screen and (min-width: 1120px){
-    .popupPanel__button{
-        display: inline-block;
-        position: absolute;
-        left: -84px;
-        top: 32px;
-    }
+.form__input:-ms-input-placeholder {
+  color: #B5B6BC;
 }
-
-
-/* Заголовок всплывающей панели */
-.popupPanel__heading.heading{
-    padding-top: 0;
+.form__input::-ms-input-placeholder {
+  color: #B5B6BC;
 }
-@media screen and (max-width: 1119px){
-    .popupPanel__heading.heading{
-        padding-top: 40px;
-    }
+.form__input::placeholder {
+  color: #B5B6BC;
 }
-
-
-/* Форма всплывающей панели */
-.popupPanel__form{
-    padding: 24px 16px 16px 16px;
-    display: flex;
-    flex-direction: column;
+.form__input:nth-child(4) {
+  height: 118px;
+  text-wrap: normal;
 }
-
-
-/*  */
-.popupPanel__form-input:nth-child(4){
-    height: 118px;
-    text-wrap: normal;
+.form__text {
+  margin-top: 0;
+  font-family: TTLakes-Bold, sans-serif;
+  color: #7E7E82;
+  font-size: 14px;
+  line-height: 16px;
 }
-
-
-/* Элементы ввода в форме */
-.popupPanel__form-input{
-    color: #B5B6BC;
-    font-size: 16px;
-    padding: 12px 0 12px 16px;
-    height: 48px;
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 8px;
-    font-family: TTLakes-Bold, sans-serif;
-    margin-bottom: 16px;
+.form__link {
+  line-height: 16px;
+  color: #FF3E79;
+  text-decoration: none;
 }
-.popupPanel__form-input::placeholder{
-    color: #B5B6BC;
+.form__button {
+  border: none;
+  width: 136px;
+  height: 32px;
+  font-size: 12px;
+  font-family: TTLakes-Bold, sans-serif;
+  color: white;
+  background: #FF3E79;
+  border-radius: 16px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  cursor: pointer;
 }
-
-
-/* Текст в форме */
-.popupPanel__form-text{
-    margin-top: 0;
-    font-family: TTLakes-Bold, sans-serif;
-    color: #7E7E82;
-    font-size: 14px;
-    line-height: 16px;
+.form__button::after {
+  margin-left: 10px;
+  display: inline-block;
+  content: "";
+  font-size: 12px;
+  background-image: url("./../../img/Arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 10px;
+  width: 6px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-
-/* Ссылки в тексе */
-.popupPanel__form-link{
-    line-height: 16px;
-    color: #FF3E79;
-    text-decoration: none;
+.form__button:hover {
+  background-color: #b01d4a;
 }
 
-
-/* Кнопки формы */
-.popupPanel__form-button{
-    border: none;
-    width: 136px;
-    height: 32px;
-    font-size: 12px;
-    font-family: TTLakes-Bold, sans-serif;
-    color: white;
-    background: #FF3E79;
-    border-radius: 16px;
-    transition: background-color 0.5s;
-    align-self: end;
-    cursor: pointer;
-}
-.popupPanel__form-button:hover{
-    background-color: #b01d4a;
-}
-
-
-/* Иконка кнопки в форме */
-.popupPanel__form-button_image{
-    width: 10px;
-    height: 10px;
-    padding-left: 12px;
+/* Состовляющие кнопки */
+.buttonForm__image {
+  width: 10px;
+  height: 10px;
+  padding-left: 12px;
 }

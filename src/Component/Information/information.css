@@ -33,6 +33,8 @@
   height: 11em;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 .information__blockText_maxHeight {
   max-height: none;
@@ -91,7 +93,7 @@
   width: 24px;
   height: 24px;
   margin: auto 0 auto 0;
-  background-image: url("../../img/More.svg");
+  background-image: url("../../Assets/img/More.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;

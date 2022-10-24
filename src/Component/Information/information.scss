@@ -1,3 +1,4 @@
+@import "./../../variables";
 // Главный блок с контентом
 .information{
   display: flex;
@@ -28,7 +29,7 @@
     margin-bottom: 18px;
     margin-top: 0;
     color:#1B1C21;
-    font-family: TTLakes-Regular, sans-serif;
+    font-family: $Regular;
     min-width: 270px;
     max-width: 45vw;
     min-height: 80px;
@@ -36,6 +37,7 @@
     height: 11em;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: 2s;
 
     // Развернутый текст
     &_maxHeight{
@@ -102,7 +104,7 @@
   }
   // Текс блока читать далее
   &__moreText{
-    font-family: TTLakes-Medium, sans-serif;
+    font-family:$Medium;
     margin-left: 10px;
   }
   // Иконка блока читать далее
@@ -110,7 +112,7 @@
     width: 24px;
     height: 24px;
     margin: auto 0 auto 0;
-    background-image: url("../../img/More.svg");
+    background-image: url("../../Assets/img/More.svg");
     background-repeat: no-repeat;
     background-position:center;
     object-fit: fill;

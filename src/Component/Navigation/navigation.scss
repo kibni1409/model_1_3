@@ -1,3 +1,4 @@
+@import "./../../variables";
 // Блок навигации
 .navigation{
   padding-top: 8px;
@@ -49,18 +50,18 @@
     padding: 7px 8px 7px 8px;
     white-space: nowrap;
     font-size: 16px;
-    color: #7E7E82;
+    color: $Grey;
     border-radius: 10px;
-    font-family: TTLakes-Regular, sans-serif;
+    font-family: $Regular;
 
     // Тень при наведении
     &:hover{
-      box-shadow: 0 0 0 2px #B8FFEC;
+      box-shadow: 0 0 0 2px $AquaShadow;
     }
     // Активный пункт
     &_active{
-      background-color: #FFFFFF;
-      border-color: #B8FFEC;
+      background-color: $White;
+      border-color: $Aqua;
       border-width: 2px;
       border-radius: 10px;
       border-style: solid;

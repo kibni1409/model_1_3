@@ -1,18 +1,19 @@
+@import "./../../variables";
 // Общий блок для карточек
 .repairBar{
   padding-top: 32px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #F8F8F8;
+  background-color: $WhiteBackground;
 
   // Заголовок у блока для карточек
   &__heading{
     padding: 16px 16px 16px 32px;
     font-size: 16px;
-    color: #7E7E82;
-    font-family: TTLakes-Regular, sans-serif;
-    background: linear-gradient(90deg,  #F8F8F8 10%, rgba(255,255,255,1) 100%);
+    color: $Grey;
+    font-family: $Regular;
+    background: linear-gradient(90deg,  $WhiteBackground 10%, $White 100%);
   }
   // Центральный блок для карточек
   &__main{
@@ -75,7 +76,7 @@
 
     justify-content: space-between;
     padding: 16px;
-    background: #FFFFFF;
+    background: $White;
     border-radius: 6px;
 
     // Четвертая карточка
@@ -115,7 +116,7 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    color: #1B1C21;
+    color: $BlackText;
   }
   // Кнопка в карточке
   &__button{
@@ -123,9 +124,9 @@
     width: 40px;
     max-width: 40px;
     height: 40px;
-    border: 2px solid #FF3E79;
+    border: 2px solid $Button;
     border-radius: 20px;
-    background-image: url("./../../img/ArrowPink.svg");
+    background-image: url("../../Assets/img/ArrowPink.svg");
     background-repeat: no-repeat;
     background-position:center;
     object-fit: fill;
@@ -135,17 +136,17 @@
 
     // Наведение на кнопку
     &:hover{
-      background-color: #b01d4a;
-      background-image: url("./../../img/Arrow.svg");
-      border: 2px solid white;
+      background-color: $ButtonHover;
+      background-image: url("../../Assets/img/Arrow.svg");
+      border: 2px solid $White;
     }
   }
   // Таблица прайса
   &__cardPrice{
     padding-left: 24px;
     padding-right: 24px;
-    background-color: #FFFFFF;
-    font-family: TTLakes-Regular, sans-serif;
+    background-color: $White;
+    font-family: $Regular;
     width: auto;
     height: 60px;
     display: flex;
@@ -158,8 +159,8 @@
 
     // Заголовок
     &:first-child{
-      color: #7E7E82;
-      background-color: #F8F8F8;
+      color: $Grey;
+      background-color: $WhiteBackground;
       box-shadow: none;
 
       // Кнопка заголовка
@@ -212,7 +213,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: TTLakes-Regular, sans-serif;
+  font-family: $Regular;
   font-size: 14px;
 
   // Заголовок с названием
@@ -220,7 +221,7 @@
 
     // Название
     & > .cellName{
-      color: #7E7E82;
+      color: $Grey;
     }
   }
   // Заголовок с прайсом
@@ -228,7 +229,7 @@
 
     // Стоимость
     & > .cellPrice{
-      color: #7E7E82;
+      color: $Grey;
     }
   }
   // Заголовок со сроком
@@ -236,7 +237,7 @@
 
     // Время
     & > .cellTime{
-      color: #7E7E82;
+      color: $Grey;
     }
   }
   // Ячейка с кнопкой

@@ -1,7 +1,8 @@
+@import "./../../variables";
 // Подвал сайта
 .footer{
   width: 100%;
-  background-color: #F8F8F8;
+  background-color: $WhiteBackground;
   padding: 24px 0 0 0;
   height: 292px;
   display: flex;
@@ -15,12 +16,13 @@
     max-width: 421px;
     min-width: 260px;
     color: #1B1C21;
-    font-family: TTLakes-Regular, sans-serif;
+    font-family: $Regular;
     font-size: 14px;
   }
 
   // Ссылка в подвале
   &__link{
+    font-family: $Regular;
     display: inline-block;
     padding: 0 40px 40px 24px;
     align-self: start;
@@ -32,7 +34,7 @@
       display:  inline-block;
       content:"";
       font-size: 16px;
-      background-image: url("./../../img/ArrowPink.svg");
+      background-image: url("../../Assets/img/ArrowPink.svg");
       background-repeat: no-repeat;
       background-position:center;
       object-fit: fill;
@@ -52,7 +54,7 @@
     border-top: 1px solid #D9FFF5;
     height: 145px;
     color: #7E7E82;
-    font-family: TTLakes-Regular, sans-serif;
+    font-family: $Regular;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

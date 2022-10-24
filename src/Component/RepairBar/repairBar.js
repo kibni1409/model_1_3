@@ -1,16 +1,16 @@
 /* Данные карточек фирм */
 let FirmCardsData = [
-    {urlPick: 'src/img/Lenovo.svg'},
-    {urlPick: 'src/img/Samsung.svg'},
-    {urlPick: 'src/img/Apple.svg'},
-    {urlPick: 'src/img/Bosch.svg'},
-    {urlPick: 'src/img/Hp.svg'},
-    {urlPick: 'src/img/Acer.svg'},
-    {urlPick: 'src/img/ViewSonic.svg'},
-    {urlPick: 'src/img/Sony.svg'},
-    {urlPick: 'src/img/Lenovo.svg'},
-    {urlPick: 'src/img/Samsung.svg'},
-    {urlPick: 'src/img/Apple.svg'}
+    {urlPick: 'src/Assets/img/Lenovo.svg'},
+    {urlPick: 'src/Assets/img/Samsung.svg'},
+    {urlPick: 'src/Assets/img/Apple.svg'},
+    {urlPick: 'src/Assets/img/Bosch.svg'},
+    {urlPick: 'src/Assets/img/Hp.svg'},
+    {urlPick: 'src/Assets/img/Acer.svg'},
+    {urlPick: 'src/Assets/img/ViewSonic.svg'},
+    {urlPick: 'src/Assets/img/Sony.svg'},
+    {urlPick: 'src/Assets/img/Lenovo.svg'},
+    {urlPick: 'src/Assets/img/Samsung.svg'},
+    {urlPick: 'src/Assets/img/Apple.svg'}
 ];
 
 /* Данные карточек моделей */
@@ -143,12 +143,6 @@ function PriceCards(array){
         button.type = 'submit';
         button.textContent = 'ЗАКАЗАТЬ';
 
-        let img = document.createElement('img');
-        img.classList.add('buttonForm__image');
-        img.src = "./src/img/Arrow.svg";
-        img.alt = "./src/img/Arrow.svg";
-
-        button.appendChild(img);
         card.appendChild(name);
         card.appendChild(price);
         card.appendChild(time);

@@ -1,3 +1,4 @@
+@import "./../../variables";
 // Заголовок
 .heading {
   display: flex;
@@ -12,7 +13,7 @@
   // Текст заголовка
   &__text {
     font-size: 28px;
-    font-family: TTLakes-Bold, sans-serif;
+    font-family: $Bold;
     line-height: 40px;
     align-self: center;
 
@@ -23,12 +24,12 @@
       float: left;
       content:"";
       font-size: 16px;
-      color: #41F6D7;
+      color: $Aqua;
       height: 40px;
       width: 4px;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
-      background: #41F6D7;
+      background: $Aqua;
     }
 
     // Мобильный вариант
@@ -75,7 +76,7 @@
     font-size: 16px;
     color: #1B1C21;
     align-self: center;
-    font-family: TTLakes-Regular, sans-serif;
+    font-family: $Regular;
     cursor: pointer;
   }
 

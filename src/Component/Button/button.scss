@@ -1,15 +1,17 @@
+@import "./../../variables";
+
 // Кнопка
 .button{
   width: 40px;
   height: 40px;
-  background-color: #FF3E79;
+  background-color: $Button;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.5s ;
 
   // Наведение на кнопку
   &:hover{
-    background-color: #b01d4a;
+    background-color: $ButtonHover;
   }
 }
 
@@ -23,29 +25,29 @@
 
 // Стиль кнопки меню
 .button_menu{
-  @include buttonStyle("../../img/Menu.svg");
+  @include buttonStyle("./../../Assets/img/Menu.svg");
 }
 // Стиль кнопки вызова
 .button_call{
-  @include buttonStyle("../../img/Call.svg");
+  @include buttonStyle("./../../Assets/img/Call.svg");
 }
 // Стиль кнопки сообщения
 .button_message{
-  @include buttonStyle("../../img/Message.svg");
+  @include buttonStyle("./../../Assets/img/Message.svg");
 }
 // Стиль кнопки профиля
 .button_profile{
-  @include buttonStyle("../../img/Profile.svg");
+  @include buttonStyle("./../../Assets/img/Profile.svg");
 }
 // Стиль кнопки инструментов
 .button_tools{
-  @include buttonStyle("../../img/Tools.svg");
+  @include buttonStyle("./../../Assets/img/Tools.svg");
 }
 // Стиль кнопки поиска
 .button_search{
-  @include buttonStyle("../../img/Search.svg");
+  @include buttonStyle("./../../Assets/img/Search.svg");
 }
 // Стиль кнопки отмены
 .button_cancel{
-  @include buttonStyle("../../img/Cancel.svg");
+  @include buttonStyle("./../../Assets/img/Cancel.svg");
 }

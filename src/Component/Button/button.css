@@ -12,7 +12,7 @@
 }
 
 .button_menu {
-  background-image: url("../../img/Menu.svg");
+  background-image: url("./../../Assets/img/Menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;
@@ -20,7 +20,7 @@
 }
 
 .button_call {
-  background-image: url("../../img/Call.svg");
+  background-image: url("./../../Assets/img/Call.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;
@@ -28,7 +28,7 @@
 }
 
 .button_message {
-  background-image: url("../../img/Message.svg");
+  background-image: url("./../../Assets/img/Message.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;
@@ -36,7 +36,7 @@
 }
 
 .button_profile {
-  background-image: url("../../img/Profile.svg");
+  background-image: url("./../../Assets/img/Profile.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;
@@ -44,7 +44,7 @@
 }
 
 .button_tools {
-  background-image: url("../../img/Tools.svg");
+  background-image: url("./../../Assets/img/Tools.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;
@@ -52,7 +52,7 @@
 }
 
 .button_search {
-  background-image: url("../../img/Search.svg");
+  background-image: url("./../../Assets/img/Search.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;
@@ -60,7 +60,7 @@
 }
 
 .button_cancel {
-  background-image: url("../../img/Cancel.svg");
+  background-image: url("./../../Assets/img/Cancel.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;

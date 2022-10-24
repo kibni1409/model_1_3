@@ -24,6 +24,7 @@
   font-size: 14px;
 }
 .footer__link {
+  font-family: TTLakes-Regular, sans-serif;
   display: inline-block;
   padding: 0 40px 40px 24px;
   -ms-flex-item-align: start;
@@ -39,7 +40,7 @@
   display: inline-block;
   content: "";
   font-size: 16px;
-  background-image: url("./../../img/ArrowPink.svg");
+  background-image: url("../../Assets/img/ArrowPink.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;

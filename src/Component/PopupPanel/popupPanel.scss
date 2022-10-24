@@ -1,3 +1,4 @@
+@import "./../../variables";
 // Всплывающая панель
 .popupPanel {
   z-index: 10;
@@ -7,7 +8,7 @@
   width: 378px;
   right: 0;
   height: 100vh;
-  background: #FFFFFF;
+  background: $White;
   transition: transform 1s;
   box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
 
@@ -74,18 +75,18 @@
 
   // Элементы ввода в форме
   &__input {
-    color: #B5B6BC;
+    color: $GreyForm;
     font-size: 16px;
     padding: 12px 0 12px 16px;
     height: 48px;
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
+    background: $White;
+    border: 1px solid $Divider;
     border-radius: 8px;
     font-family: TTLakes-Bold, sans-serif;
     margin-bottom: 16px;
 
     &::placeholder {
-      color: #B5B6BC;
+      color: $GreyForm;
     }
 
     &:nth-child(4) {
@@ -97,15 +98,15 @@
   // Текст в форме
   &__text {
     margin-top: 0;
-    font-family: TTLakes-Bold, sans-serif;
-    color: #7E7E82;
+    font-family: $Bold;
+    color: $Grey;
     font-size: 14px;
     line-height: 16px;
   }
   // Ссылки в тексе
   &__link {
     line-height: 16px;
-    color: #FF3E79;
+    color: $Button;
     text-decoration: none;
   }
   // Кнопки формы
@@ -114,9 +115,9 @@
     width: 136px;
     height: 32px;
     font-size: 12px;
-    font-family: TTLakes-Bold, sans-serif;
-    color: white;
-    background: #FF3E79;
+    font-family: $Bold;
+    color: $White;
+    background: $Button;
     border-radius: 16px;
     transition: background-color 0.5s;
     align-self: end;
@@ -128,7 +129,7 @@
       display:  inline-block;
       content:"";
       font-size: 12px;
-      background-image: url("./../../img/Arrow.svg");
+      background-image: url("../../Assets/img/Arrow.svg");
       background-repeat: no-repeat;
       background-position:center;
       object-fit: fill;
@@ -139,7 +140,7 @@
     }
     // Наведение на кнопку
     &:hover {
-      background-color: #b01d4a;
+      background-color: $ButtonHover;
     }
 
   }

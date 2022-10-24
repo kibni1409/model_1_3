@@ -1,19 +1,19 @@
 /* Шрифты */
 @font-face {
     font-family: "TTLakes-Bold";
-    src: url("fonts/TTLakes-Bold.woff") format("woff")
+    src: url("Assets/fonts/TTLakes-Bold.woff") format("woff")
 }
 @font-face {
     font-family: "TTLakes-Regular";
-    src: url("fonts/TTLakes-Regular.woff") format("woff");
+    src: url("Assets/fonts/TTLakes-Regular.woff") format("woff");
 }
 @font-face {
     font-family: "TTLakes-Medium";
-    src: url("fonts/TTLakes-Medium.woff") format("woff");
+    src: url("Assets/fonts/TTLakes-Medium.woff") format("woff");
 }
 @font-face {
     font-family: "TTLakes-Black";
-    src: url("fonts/TTLakes-Black.woff") format("woff");
+    src: url("Assets/fonts/TTLakes-Black.woff") format("woff");
 }
 
 
@@ -40,15 +40,18 @@ html{
     background-color: #cccccc;
     transition: opacity 2s;
 }
+/* Скрытый */
 .blur_hidden{
     opacity: 0;
     display: none;
 }
+/* Открытое меню */
 .blur_openMenu{
     display: block;
     opacity: 0.6;
     z-index: 2;
 }
+/* Открыт сайд бар */
 .blur_openPopup{
     display: block;
     opacity: 0.6;

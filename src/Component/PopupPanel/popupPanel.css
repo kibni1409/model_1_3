@@ -116,7 +116,7 @@
   height: 32px;
   font-size: 12px;
   font-family: TTLakes-Bold, sans-serif;
-  color: white;
+  color: #FFFFFF;
   background: #FF3E79;
   border-radius: 16px;
   -webkit-transition: background-color 0.5s;
@@ -131,7 +131,7 @@
   display: inline-block;
   content: "";
   font-size: 12px;
-  background-image: url("./../../img/Arrow.svg");
+  background-image: url("../../Assets/img/Arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;

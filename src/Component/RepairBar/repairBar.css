@@ -15,8 +15,8 @@
   font-size: 16px;
   color: #7E7E82;
   font-family: TTLakes-Regular, sans-serif;
-  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #F8F8F8), to(rgb(255, 255, 255)));
-  background: linear-gradient(90deg, #F8F8F8 10%, rgb(255, 255, 255) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #F8F8F8), to(#FFFFFF));
+  background: linear-gradient(90deg, #F8F8F8 10%, #FFFFFF 100%);
 }
 .repairBar__main {
   padding: 24px 16px 0 16px;
@@ -133,7 +133,7 @@
   height: 40px;
   border: 2px solid #FF3E79;
   border-radius: 20px;
-  background-image: url("./../../img/ArrowPink.svg");
+  background-image: url("../../Assets/img/ArrowPink.svg");
   background-repeat: no-repeat;
   background-position: center;
   -o-object-fit: fill;
@@ -147,8 +147,8 @@
 }
 .repairBar__button:hover {
   background-color: #b01d4a;
-  background-image: url("./../../img/Arrow.svg");
-  border: 2px solid white;
+  background-image: url("../../Assets/img/Arrow.svg");
+  border: 2px solid #FFFFFF;
 }
 .repairBar__cardPrice {
   padding-left: 24px;

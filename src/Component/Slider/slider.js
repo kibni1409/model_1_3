@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper'
+/*import Swiper, { Navigation, Pagination } from 'swiper'
 
 const screenWidth = window.screen.width * 0.0036;
 
@@ -135,7 +135,4 @@ const firmaSwiper = new Swiper('.firmaSwiper', {
         }
     }
 });
-
-
-
-
+*/

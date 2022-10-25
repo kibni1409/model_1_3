@@ -1,0 +1,94 @@
+// Шрифты
+@font-face {
+  font-family: "TTLakes-Bold";
+  src: url("Assets/fonts/TTLakes-Bold.woff") format("woff")
+}
+@font-face {
+  font-family: "TTLakes-Regular";
+  src: url("Assets/fonts/TTLakes-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes-Medium";
+  src: url("Assets/fonts/TTLakes-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes-Black";
+  src: url("Assets/fonts/TTLakes-Black.woff") format("woff");
+}
+
+
+// Стиль для всего документа
+html{
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: white;
+  width: 100vw;
+}
+
+// Запрет на прокрутку
+.html_dontOverflow{
+  overflow-y: hidden;
+}
+
+// Замутнение экрана
+.blur{
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #cccccc;
+  transition: opacity 2s;
+
+  // Скрытый
+  &_hidden{
+    opacity: 0;
+    display: none;
+  }
+  // Открытое меню
+  &_openMenu{
+    display: block;
+    opacity: 0.6;
+    z-index: 2;
+  }
+  // Открыт сайд бар
+  &_openPopup{
+    display: block;
+    opacity: 0.6;
+    z-index: 7;
+  }
+}
+
+
+// Тело сайта
+body{
+  max-width: 1440px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: #F8F8F8;
+
+  // Десктопный вариант
+  @media screen and (min-width: 1120px){
+    & {
+      flex-direction: row;
+    }
+  }
+}
+
+// Информативная часть
+.body-block{
+
+
+  @media screen and (min-width: 1120px){
+    & {
+      max-width: calc(1440px - 320px);
+      width: calc(100vw - 320px);
+    }
+  }
+}
+
+

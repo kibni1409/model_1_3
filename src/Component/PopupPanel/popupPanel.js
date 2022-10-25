@@ -1,5 +1,5 @@
 /* Закрытие окна */
-function ClosePopupPanel(e){
+export function ClosePopupPanel(e){
 
     let element;
     /* Окно с обратной связью */
@@ -39,7 +39,7 @@ function ClosePopupPanel(e){
 
 
 /* Открытие всплывающего окна */
-function OpenPopupPanel(e){
+export function OpenPopupPanel(e){
 
     let element;
     /* Окно с обратной связью */
@@ -63,7 +63,7 @@ function OpenPopupPanel(e){
     blur.classList.add('blur_openPopup');
 }
 
-document.addEventListener("DOMContentLoaded", function (){
+/*document.addEventListener("DOMContentLoaded", function (){
     let openButton = document.querySelectorAll('.openPopup');
     for (let i = 0; i < openButton.length; i++){
         openButton[i].addEventListener('click', OpenPopupPanel);
@@ -76,4 +76,4 @@ document.addEventListener("DOMContentLoaded", function (){
 
     let blur = document.querySelector('.blur');
     blur.addEventListener('click', ClosePopupPanel);
-});
+});*/

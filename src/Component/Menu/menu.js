@@ -1,5 +1,5 @@
 /* Открыть меню */
-function OpenMenu(){
+export function OpenMenu(){
 
     let html = document.querySelector('html');
     html.classList.add('html_dontOverflow');
@@ -12,7 +12,7 @@ function OpenMenu(){
 }
 
 /* Закрыть меню */
-function CloseMenu(){
+export function CloseMenu(){
 
     let html = document.querySelector('html');
     html.classList.remove('html_dontOverflow');
@@ -24,7 +24,7 @@ function CloseMenu(){
     blur.classList.remove('blur_openMenu');
 }
 
-document.addEventListener("DOMContentLoaded", function (){
+/*document.addEventListener("DOMContentLoaded", function (){
     let menuButton = document.querySelector('.menu__button.button.button_menu');
     menuButton.addEventListener('click', OpenMenu);
 
@@ -33,4 +33,4 @@ document.addEventListener("DOMContentLoaded", function (){
 
     let blur = document.querySelector('.blur');
     blur.addEventListener('click', CloseMenu);
-})
+})*/

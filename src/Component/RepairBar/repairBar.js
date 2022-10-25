@@ -1,20 +1,20 @@
 /* Данные карточек фирм */
-let FirmCardsData = [
-    {urlPick: 'src/Assets/img/Lenovo.svg'},
-    {urlPick: 'src/Assets/img/Samsung.svg'},
-    {urlPick: 'src/Assets/img/Apple.svg'},
-    {urlPick: 'src/Assets/img/Bosch.svg'},
-    {urlPick: 'src/Assets/img/Hp.svg'},
-    {urlPick: 'src/Assets/img/Acer.svg'},
-    {urlPick: 'src/Assets/img/ViewSonic.svg'},
-    {urlPick: 'src/Assets/img/Sony.svg'},
-    {urlPick: 'src/Assets/img/Lenovo.svg'},
-    {urlPick: 'src/Assets/img/Samsung.svg'},
-    {urlPick: 'src/Assets/img/Apple.svg'}
+export let FirmCardsData = [
+    {urlPick: './src/Assets/img/Lenovo.svg'},
+    {urlPick: './src/Assets/img/Samsung.svg'},
+    {urlPick: './src/Assets/img/Apple.svg'},
+    {urlPick: './src/Assets/img/Bosch.svg'},
+    {urlPick: './src/Assets/img/Hp.svg'},
+    {urlPick: './src/Assets/img/Acer.svg'},
+    {urlPick: './src/Assets/img/ViewSonic.svg'},
+    {urlPick: './src/Assets/img/Sony.svg'},
+    {urlPick: './src/Assets/img/Lenovo.svg'},
+    {urlPick: './src/Assets/img/Samsung.svg'},
+    {urlPick: './src/Assets/img/Apple.svg'}
 ];
 
 /* Данные карточек моделей */
-let ModelCardsData = [
+export let ModelCardsData = [
     {head: 'Ремонт ноутбуков'},
     {head: 'Ремонт планшетов'},
     {head: 'Ремонт ПК'},
@@ -25,7 +25,7 @@ let ModelCardsData = [
 ];
 
 /* Данные карточек прайса */
-let PriceCardsData = [
+export let PriceCardsData = [
     {
         name: 'Ремонт услуги',
         price: 'Цена',
@@ -59,7 +59,7 @@ let PriceCardsData = [
 ]
 
 /* Создание карточек фирм */
-function Cards(array){
+export function Cards(array){
 
     let element;
 
@@ -110,7 +110,7 @@ function Cards(array){
 }
 
 /* Создание прайса */
-function PriceCards(array){
+export function PriceCards(array){
     let element;
 
     element = document.querySelector('.repairBar__main.price');
@@ -153,11 +153,8 @@ function PriceCards(array){
 }
 
 /* Создание карточек при загрузве документа */
-document.addEventListener("DOMContentLoaded", function (){
+/*document.addEventListener("DOMContentLoaded", function (){
     Cards(ModelCardsData);
     Cards(FirmCardsData);
     PriceCards(PriceCardsData);
-})
-
-
-
+})*/

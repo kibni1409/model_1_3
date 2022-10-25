@@ -1,5 +1,5 @@
 /* Развертка */
-function ReadMore(e) {
+export function ReadMore(e) {
     let text;
     let firma;
     let icon;
@@ -41,7 +41,7 @@ function ReadMore(e) {
 }
 
 /* Скрыть блок читать далее */
-function Size(){
+export function Size(){
     let infoText = document.querySelector('.information__blockText');
     let infoMore = document.querySelector('.information__blockMore.info');
     if( infoText.scrollWidth > infoText.offsetWidth || infoText.scrollHeight > infoText.offsetHeight){
@@ -53,7 +53,7 @@ function Size(){
 }
 
 /* Расчет размера при загрузке документа */
-document.addEventListener("DOMContentLoaded", function (){
+/*document.addEventListener("DOMContentLoaded", function (){
     Size();
 
     let body = document.querySelector('body');
@@ -67,3 +67,4 @@ document.addEventListener("DOMContentLoaded", function (){
             elem.addEventListener('click', ReadMore);
         }
 })
+*/
